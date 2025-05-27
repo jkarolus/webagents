@@ -188,8 +188,7 @@ const Index = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Web Agents Research Database</h1>
-          <p className="text-lg text-gray-600">Discover and filter through cutting-edge web agent research papers</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Web Agents Database</h1>
         </div>
 
         {/* Search and Filters */}
