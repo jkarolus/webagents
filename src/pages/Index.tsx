@@ -14,15 +14,21 @@ const data = [
     "authors": "Li, Tao; Li, Gang; Deng, Zhiwei; Wang, Bryan; Li, Yang",
     "title": "A Zero-Shot Language Agent for Computer Control with Structured Reflection",
     "shorthand": "zeroshot",
-    "models": "FLAN-PaLM2 L",
-    "inputModality": "HTML",
+    "models": [
+      "FLAN-PaLM2 L"
+    ],
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "staged planning",
       "structured self reflection",
       "structured thought management"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "MINIWOB++",
+    "benchmarksUsed": [
+      "MINIWOB++"
+    ],
     "modalitiesFinal": "+",
     "llmComplexityFinal": "+",
     "overallFinal": "+",
@@ -40,7 +46,9 @@ const data = [
       "GPT-3.5",
       "text-davinci-003"
     ],
-    "inputModality": "HTML",
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "self-refinement of previously generated plan",
       "code-style prompt structure",
@@ -49,7 +57,9 @@ const data = [
       "prompting only"
     ],
     "multiLLM": "TRUE",
-    "benchmarksUsed": "MiniWoB++",
+    "benchmarksUsed": [
+      "MiniWoB++"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -98,14 +108,18 @@ const data = [
       "Llama-3 70B",
       "xLAM-v0.1-r"
     ],
-    "inputModality": "DOM tree",
+    "inputModality": [
+      "DOM tree"
+    ],
     "strategies": [
       "Monte Carlo Tree Search",
       "Direct Preference Optimization",
       "Online Search"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebShop",
+    "benchmarksUsed": [
+      "WebShop"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "0",
     "overallFinal": "0",
@@ -119,8 +133,12 @@ const data = [
     "authors": "Wang, Zora Zhiruo; Mao, Jiayuan; Fried, Daniel; Neubig, Graham",
     "title": "Agent Workflow Memory",
     "shorthand": "AWM",
-    "models": "GPT-4",
-    "inputModality": "workflows from memory + HTML/AX-tree",
+    "models": [
+      "GPT-4"
+    ],
+    "inputModality": [
+      "workflows from memory + HTML/AX-tree"
+    ],
     "strategies": [
       "workflow memory (pre-generated/updated at runtime  by LM)",
       "action space expansion"
@@ -147,10 +165,16 @@ const data = [
       "Llama-2 7B",
       "Llama-2 13B"
     ],
-    "inputModality": "not mentioned but should be HTML",
-    "strategies": "trajectory tuning",
+    "inputModality": [
+      "not mentioned but should be HTML"
+    ],
+    "strategies": [
+      "trajectory tuning"
+    ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "AgentBank",
+    "benchmarksUsed": [
+      "AgentBank"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "+",
     "overallFinal": "0",
@@ -176,9 +200,13 @@ const data = [
       "axtree",
       "screenshots/SOM"
     ],
-    "strategies": "web agents might leak sensitive personal information; data minimization;  prompting-based approach to reduce unnecessary use of sensitive information",
+    "strategies": [
+      "web agents might leak sensitive personal information; data minimization;  prompting-based approach to reduce unnecessary use of sensitive information"
+    ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "AgentDAM",
+    "benchmarksUsed": [
+      "AgentDAM"
+    ],
     "modalitiesFinal": "-",
     "llmComplexityFinal": "-",
     "overallFinal": "-",
@@ -192,7 +220,9 @@ const data = [
     "authors": "Abuelsaad, Tamer; Akkil, Deepak; Dey, Prasenjit; Jagmohan, Ashish; Vempaty, Aditya; Kokku, Ravi",
     "title": "Agent-E: From Autonomous Web Navigation to Foundational Design Principles in Agentic Systems",
     "shorthand": "Agent E",
-    "models": "GPT-4-Turbo",
+    "models": [
+      "GPT-4-Turbo"
+    ],
     "inputModality": [
       "text only",
       "content type specific",
@@ -203,7 +233,9 @@ const data = [
       "finding the next actions to\nexecute and reporting its task success or failure back to the planner)"
     ],
     "multiLLM": "TRUE",
-    "benchmarksUsed": "WebVoyager",
+    "benchmarksUsed": [
+      "WebVoyager"
+    ],
     "modalitiesFinal": "+",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -217,15 +249,21 @@ const data = [
     "authors": "Yang, Ke; Liu, Yao; Chaudhary, Sapana; Fakoor, Rasool; Chaudhari, Pratik; Karypis, George; Rangwala, Huzefa",
     "title": "AgentOccam: A Simple Yet Strong Baseline for LLM-Based Web Agents",
     "shorthand": "AgentOccam",
-    "models": "GPT-4-Turbo",
-    "inputModality": "HTML/AX-tree",
+    "models": [
+      "GPT-4-Turbo"
+    ],
+    "inputModality": [
+      "HTML/AX-tree"
+    ],
     "strategies": [
       "action refinement",
       "observation space refinement",
       "add planning actions to allow for navigation workflow self organization"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebArena",
+    "benchmarksUsed": [
+      "WebArena"
+    ],
     "modalitiesFinal": "+",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -243,7 +281,9 @@ const data = [
       "Qwen2.5-7B-Instruct",
       "Qwen2.5-32B-Instruct"
     ],
-    "inputModality": "not 100% clear but probably Screenshots",
+    "inputModality": [
+      "not 100% clear but probably Screenshots"
+    ],
     "strategies": [
       "\"scalable data synthesis pipeline that generates high-quality web agent trajectories by leveraging web tutorials\"",
       "automatically gather tutorial-like texts -> transform to task goals with step-by-step instructions -> evaluate using VLM (GPT-4V)"
@@ -271,8 +311,12 @@ const data = [
       "Llama 2 13B",
       "Llama 2 70B"
     ],
-    "inputModality": "HTML",
-    "strategies": "finetuning using AgentInstruct + hybrid instruction tuning",
+    "inputModality": [
+      "HTML"
+    ],
+    "strategies": [
+      "finetuning using AgentInstruct + hybrid instruction tuning"
+    ],
     "multiLLM": "FALSE",
     "benchmarksUsed": [
       "WebShop",
@@ -293,11 +337,19 @@ const data = [
     "authors": "Yoran, Ori; Amouyal, Samuel Joseph; Malaviya, Chaitanya; Bogin, Ben; Press, Ofir; Berant, Jonathan",
     "title": "AssistantBench: Can Web Agents Solve Realistic and Time-Consuming Tasks?",
     "shorthand": "SeePlanAct",
-    "models": "GPT-4-Turbo",
-    "inputModality": "Screenshots + HTML for grounding",
-    "strategies": "SeeAct + planning component + memory buffer (some sort of RAG)",
+    "models": [
+      "GPT-4-Turbo"
+    ],
+    "inputModality": [
+      "Screenshots + HTML for grounding"
+    ],
+    "strategies": [
+      "SeeAct + planning component + memory buffer (some sort of RAG)"
+    ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "AssistantBench",
+    "benchmarksUsed": [
+      "AssistantBench"
+    ],
     "modalitiesFinal": "-",
     "llmComplexityFinal": "-",
     "overallFinal": "-",
@@ -349,7 +401,9 @@ const data = [
       "Llama-3.1 405B; intent predictor: Mistral-7B-v0.1",
       "Flan-T5-XL"
     ],
-    "inputModality": "HTML",
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "self-exploration",
       "intent prediction",
@@ -377,7 +431,9 @@ const data = [
       "GPT-3.5-Turbo",
       "GPT-4-Turbo"
     ],
-    "inputModality": "HTML",
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "Building stage: Interactive Env. ->Planner + Builder + Consolidator = rule set -> Formulator = manual used in test stage",
       "case-conditional prompting",
@@ -411,9 +467,13 @@ const data = [
       "HTML",
       "Screenshots"
     ],
-    "strategies": "automatically evaluate user instructions and arbitrary agent trajectorie using modular caption-then-reason or end-to-end approach",
+    "strategies": [
+      "automatically evaluate user instructions and arbitrary agent trajectorie using modular caption-then-reason or end-to-end approach"
+    ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebArena",
+    "benchmarksUsed": [
+      "WebArena"
+    ],
     "modalitiesFinal": "-",
     "llmComplexityFinal": "-",
     "overallFinal": "-",
@@ -427,8 +487,12 @@ const data = [
     "authors": "Lai, Hanyu; Liu, Xiao; Iong, Iat Long; Yao, Shuntian; Chen, Yuxuan; Shen, Pengbo; Yu, Hao; Zhang, Hanchen; Zhang, Xiaohan; Dong, Yuxiao; Tang, Jie",
     "title": "AutoWebGLM: A Large Language Model-based Web Navigating Agent",
     "shorthand": "AutoWebGLM",
-    "models": "ChatGLM3-6B",
-    "inputModality": "HTML",
+    "models": [
+      "ChatGLM3-6B"
+    ],
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "curriculum learning",
       "self-sampling reinforcement learning",
@@ -469,9 +533,13 @@ const data = [
       "audio",
       "and real-time interaction; probably HTML"
     ],
-    "strategies": "multimodal benchmark; live web content; no bypassing of multimodal understanding;",
+    "strategies": [
+      "multimodal benchmark; live web content; no bypassing of multimodal understanding;"
+    ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "BEARCUBS",
+    "benchmarksUsed": [
+      "BEARCUBS"
+    ],
     "modalitiesFinal": "-",
     "llmComplexityFinal": "-",
     "overallFinal": "-",
@@ -485,7 +553,9 @@ const data = [
     "authors": "Song, Yueqi; Xu, Frank; Zhou, Shuyan; Neubig, Graham",
     "title": "Beyond Browsing: API-Based Web Agents",
     "shorthand": "Beyond Browsing",
-    "models": "GPT-4o",
+    "models": [
+      "GPT-4o"
+    ],
     "inputModality": [
       "HTML",
       "AX-Tree or API-calls"
@@ -495,7 +565,9 @@ const data = [
       "hybrid (API and browsing) agent"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebArena",
+    "benchmarksUsed": [
+      "WebArena"
+    ],
     "modalitiesFinal": "+",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -523,7 +595,9 @@ const data = [
       "\"Resume LLM Agent: Predict next Action using Human Input\""
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebArena",
+    "benchmarksUsed": [
+      "WebArena"
+    ],
     "modalitiesFinal": "+",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -537,8 +611,12 @@ const data = [
     "authors": "Wang, Haoyu; Li, Tao; Deng, Zhiwei; Roth, Dan; Li, Yang",
     "title": "Devil`s Advocate: Anticipatory Reflection for LLM Agents",
     "shorthand": "DevilsAdvocate",
-    "models": "GPT-4",
-    "inputModality": "AX-Tree",
+    "models": [
+      "GPT-4"
+    ],
+    "inputModality": [
+      "AX-Tree"
+    ],
     "strategies": [
       "task decomposition",
       "introspective intervention (anticipatory reflection",
@@ -546,7 +624,9 @@ const data = [
       "comprehensive review)"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebArena",
+    "benchmarksUsed": [
+      "WebArena"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -569,9 +649,13 @@ const data = [
       "HTML",
       "Screenshots"
     ],
-    "strategies": "\"contextualize each HTML element with its neighbors in the screenshot\"",
+    "strategies": [
+      "\"contextualize each HTML element with its neighbors in the screenshot\""
+    ],
     "multiLLM": "TRUE",
-    "benchmarksUsed": "Mind2Web",
+    "benchmarksUsed": [
+      "Mind2Web"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "+",
     "overallFinal": "+",
@@ -590,14 +674,18 @@ const data = [
       "GPT-4o",
       "Llama3-8B-Instruct"
     ],
-    "inputModality": "not mentioned but should be HTML",
+    "inputModality": [
+      "not mentioned but should be HTML"
+    ],
     "strategies": [
       "Explicit Policy Optimization",
       "multi-turn reinforcement learning",
       "collaborative reasoning"
     ],
     "multiLLM": "TRUE",
-    "benchmarksUsed": "WebShop",
+    "benchmarksUsed": [
+      "WebShop"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -615,13 +703,17 @@ const data = [
       "gpt-3.5-turbo-0613",
       "gpt-4-0613"
     ],
-    "inputModality": "not mentioned but should be HTML",
+    "inputModality": [
+      "not mentioned but should be HTML"
+    ],
     "strategies": [
       "Experiential Learning (ExpeL) agent;training:  autonomous experience gathering + natural language knowledge extraction; inference: recall extracted insights + past experiences -> informed decisions; transfer learning; in context learning",
       "adjust prompts not parameters;"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebShop",
+    "benchmarksUsed": [
+      "WebShop"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -671,7 +763,9 @@ const data = [
       "HTML-T5-XL",
       "gpt-3.5-turbo"
     ],
-    "inputModality": "HTML",
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "finetuning",
       "planning",
@@ -709,9 +803,13 @@ const data = [
       "HTML",
       "Screenshots"
     ],
-    "strategies": "Grounding of visuals using HTML",
+    "strategies": [
+      "Grounding of visuals using HTML"
+    ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "Mind2Web (Multimodal)",
+    "benchmarksUsed": [
+      "Mind2Web (Multimodal)"
+    ],
     "modalitiesFinal": "-",
     "llmComplexityFinal": "-",
     "overallFinal": "-",
@@ -725,11 +823,19 @@ const data = [
     "authors": "Fereidouni, Moghis; Mosharrof, Adib; Siddique, A.b.",
     "title": "Grounded Language Agent for Product Search via Intelligent Web Interactions",
     "shorthand": "GLAINTEL",
-    "models": "Flan-T5-large",
-    "inputModality": "not mentioned but should be HTML",
-    "strategies": "Proximal Policy Optimization",
+    "models": [
+      "Flan-T5-large"
+    ],
+    "inputModality": [
+      "not mentioned but should be HTML"
+    ],
+    "strategies": [
+      "Proximal Policy Optimization"
+    ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebShop",
+    "benchmarksUsed": [
+      "WebShop"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "+",
     "overallFinal": "+",
@@ -747,10 +853,16 @@ const data = [
       "BERT-LSTM",
       "sentence-BERT"
     ],
-    "inputModality": "HTML",
-    "strategies": "grounding using cosine similarity through sentence-BERT",
+    "inputModality": [
+      "HTML"
+    ],
+    "strategies": [
+      "grounding using cosine similarity through sentence-BERT"
+    ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "RUSS Dataset",
+    "benchmarksUsed": [
+      "RUSS Dataset"
+    ],
     "modalitiesFinal": "+",
     "llmComplexityFinal": "+",
     "overallFinal": "+",
@@ -801,10 +913,16 @@ const data = [
       "CODE-DAVINCI-002",
       "GPT-3.5-Turbo"
     ],
-    "inputModality": "unclear. Either HTML or simplified webshop",
-    "strategies": "summarizer prompt + actor prompt",
+    "inputModality": [
+      "unclear. Either HTML or simplified webshop"
+    ],
+    "strategies": [
+      "summarizer prompt + actor prompt"
+    ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebShop",
+    "benchmarksUsed": [
+      "WebShop"
+    ],
     "modalitiesFinal": "+",
     "llmComplexityFinal": "0",
     "overallFinal": "0",
@@ -852,8 +970,12 @@ const data = [
     "authors": "Gu, Yu; Zheng, Boyuan; Gou, Boyu; Zhang, Kai; Chang, Cheng; Srivastava, Sanjari; Xie, Yanan; Qi, Peng; Sun, Huan; Su, Yu",
     "title": "Is Your LLM Secretly a World Model of the Internet? Model-Based Planning for Web Agents",
     "shorthand": "Webdreamer",
-    "models": "GPT-4o",
-    "inputModality": "Screenshots +  Set-of-Marks or HTML",
+    "models": [
+      "GPT-4o"
+    ],
+    "inputModality": [
+      "Screenshots +  Set-of-Marks or HTML"
+    ],
     "strategies": [
       "simulate outcomes for each candidate action",
       "model-based planning",
@@ -877,8 +999,12 @@ const data = [
     "authors": "Zhou, Andy; Yan, Kai; Shlapentokh-Rothman, Michal; Wang, Haohan; Wang, Yu-Xiong",
     "title": "Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models",
     "shorthand": "LATS",
-    "models": "GPT-3.5",
-    "inputModality": "unclear. Either HTML or simplified webshop",
+    "models": [
+      "GPT-3.5"
+    ],
+    "inputModality": [
+      "unclear. Either HTML or simplified webshop"
+    ],
     "strategies": [
       "Monte Carlo Tree Search",
       "In context learning",
@@ -886,7 +1012,9 @@ const data = [
       "self-reflection"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebShop",
+    "benchmarksUsed": [
+      "WebShop"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -900,11 +1028,19 @@ const data = [
     "authors": "Kim, Geunwoo; Baldi, Pierre; McAleer, Stephen",
     "title": "Language Models can Solve Computer Tasks",
     "shorthand": "RCI",
-    "models": "InstructGPT-3+RLHF",
-    "inputModality": "HTML",
-    "strategies": "Recursive Criticizising and Improvement of output (RCI) prompting schema; CoT",
+    "models": [
+      "InstructGPT-3+RLHF"
+    ],
+    "inputModality": [
+      "HTML"
+    ],
+    "strategies": [
+      "Recursive Criticizising and Improvement of output (RCI) prompting schema; CoT"
+    ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "MiniWoB++",
+    "benchmarksUsed": [
+      "MiniWoB++"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "0",
     "overallFinal": "0",
@@ -922,13 +1058,17 @@ const data = [
       "GPT-4o",
       "Llama-2-7B"
     ],
-    "inputModality": "API-calls",
+    "inputModality": [
+      "API-calls"
+    ],
     "strategies": [
       "memory with task specific retrieval + alignment & personalization (finetuning",
       "direct preference optimization); use API functions"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "PersonalWAB",
+    "benchmarksUsed": [
+      "PersonalWAB"
+    ],
     "modalitiesFinal": "+",
     "llmComplexityFinal": "0",
     "overallFinal": "0",
@@ -942,8 +1082,12 @@ const data = [
     "authors": "Ma, Kaixin; Zhang, Hongming; Wang, Hongwei; Pan, Xiaoman; Yu, Wenhao; Yu, Dong",
     "title": "LASER: LLM Agent with State-Space Exploration for Web Navigation",
     "shorthand": "LASER",
-    "models": "GPT-4",
-    "inputModality": "HTML",
+    "models": [
+      "GPT-4"
+    ],
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "state-space exploration",
       "constricted action space depending on state",
@@ -952,7 +1096,9 @@ const data = [
       "step-by-step thinking"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebShop",
+    "benchmarksUsed": [
+      "WebShop"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -970,13 +1116,17 @@ const data = [
       "DeBERTa 86M",
       "Flan-T5-XL"
     ],
-    "inputModality": "HTML",
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "candidate generation (element ranking task)",
       "action prediction (multiple-choice question answering task: 50 elements in ten groups a 5 + none)"
     ],
     "multiLLM": "TRUE",
-    "benchmarksUsed": "Mind2Web",
+    "benchmarksUsed": [
+      "Mind2Web"
+    ],
     "modalitiesFinal": "+",
     "llmComplexityFinal": "+",
     "overallFinal": "+",
@@ -1006,7 +1156,9 @@ const data = [
       "GPT-4V (for vision)"
     ],
     "multiLLM": "TRUE",
-    "benchmarksUsed": "WebVoyager",
+    "benchmarksUsed": [
+      "WebVoyager"
+    ],
     "modalitiesFinal": "-",
     "llmComplexityFinal": "-",
     "overallFinal": "-",
@@ -1028,7 +1180,9 @@ const data = [
       "HTML",
       "Screenshots"
     ],
-    "strategies": "\"joint finetuning instruction-finetuned language model and vision encoder with temporal and local perception on a large corpus of demonstration\"",
+    "strategies": [
+      "\"joint finetuning instruction-finetuned language model and vision encoder with temporal and local perception on a large corpus of demonstration\""
+    ],
     "multiLLM": "FALSE",
     "benchmarksUsed": [
       "MiniWoB++",
@@ -1052,7 +1206,9 @@ const data = [
       "LLama-3.1-8b",
       "Llama-3.1-70b"
     ],
-    "inputModality": "flattened DOM tree or AX-tree",
+    "inputModality": [
+      "flattened DOM tree or AX-tree"
+    ],
     "strategies": [
       "hierarchical task decomposition",
       "demonstrations:unsupervised LM exploration policy + LM trajectory labeling & annotating done with Llama-3.1-70B; supervised training of Llama-3.1-8B on  demonstrations; knowledge distillation"
@@ -1079,7 +1235,9 @@ const data = [
       "GPT-4",
       "API models in general"
     ],
-    "inputModality": "not mentioned but should be HTML",
+    "inputModality": [
+      "not mentioned but should be HTML"
+    ],
     "strategies": [
       "environment to build all kinds of agent",
       "web agents included; plugin for browser control",
@@ -1087,7 +1245,7 @@ const data = [
       "executable environment; processes important parameters like user inquiries or initiating URLs before transferring them to the web agent"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "",
+    "benchmarksUsed": [],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -1118,7 +1276,9 @@ const data = [
       "process control module"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "-",
+    "benchmarksUsed": [
+      "-"
+    ],
     "modalitiesFinal": "+",
     "llmComplexityFinal": "0",
     "overallFinal": "0",
@@ -1135,7 +1295,9 @@ const data = [
       "Feedback and Optimization"
     ],
     "shorthand": "OpenWebVoyager",
-    "models": "idefics2-8b-instruct",
+    "models": [
+      "idefics2-8b-instruct"
+    ],
     "inputModality": [
       "AX-tree",
       "screenshots"
@@ -1167,7 +1329,9 @@ const data = [
       "GPT-4o",
       "ORM-Llama-3.1"
     ],
-    "inputModality": "HTML",
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "planner model",
       "executor model",
@@ -1176,7 +1340,9 @@ const data = [
       "Grounded Plan Generation"
     ],
     "multiLLM": "TRUE",
-    "benchmarksUsed": "WebArena-Lite",
+    "benchmarksUsed": [
+      "WebArena-Lite"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -1195,7 +1361,9 @@ const data = [
       "Qwen72B",
       "Qwen7B"
     ],
-    "inputModality": "screenshot",
+    "inputModality": [
+      "screenshot"
+    ],
     "strategies": [
       "RL",
       "autonomous task proposal",
@@ -1225,7 +1393,9 @@ const data = [
       "text-davinci-002",
       "Llama-2-7B-Chat"
     ],
-    "inputModality": "not mentioned but should be HTML",
+    "inputModality": [
+      "not mentioned but should be HTML"
+    ],
     "strategies": [
       "Actor (GPT-3-175B or  Llama-2-70B ) - Critic LLM setup",
       "askact prompting",
@@ -1234,7 +1404,9 @@ const data = [
       "fine-tuning"
     ],
     "multiLLM": "TRUE",
-    "benchmarksUsed": "WebShop",
+    "benchmarksUsed": [
+      "WebShop"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "0",
     "overallFinal": "0",
@@ -1255,7 +1427,9 @@ const data = [
       "GPT-4o",
       "sentence-transformers/all-MiniLM-L6-v2"
     ],
-    "inputModality": "not mentioned but should be HTML",
+    "inputModality": [
+      "not mentioned but should be HTML"
+    ],
     "strategies": [
       "Remembering",
       "Reflecting",
@@ -1265,7 +1439,9 @@ const data = [
       "\"providing a more comprehensive and structured representation of the agent\u0092s historical experiences\""
     ],
     "multiLLM": "TRUE",
-    "benchmarksUsed": "WebArena",
+    "benchmarksUsed": [
+      "WebArena"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -1283,8 +1459,12 @@ const data = [
       "GPT-3.5",
       "GPT-4"
     ],
-    "inputModality": "HTML",
-    "strategies": "Retrieval augmented task decomposition + retrieval augmented action generation; Planning algorithm",
+    "inputModality": [
+      "HTML"
+    ],
+    "strategies": [
+      "Retrieval augmented task decomposition + retrieval augmented action generation; Planning algorithm"
+    ],
     "multiLLM": "FALSE",
     "benchmarksUsed": [
       "Mind2Web",
@@ -1303,11 +1483,19 @@ const data = [
     "authors": "Yao, Shunyu; Zhao, Jeffrey; Yu, Dian; Du, Nan; Shafran, Izhak; Narasimhan, Karthik; Cao, Yuan",
     "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
     "shorthand": "ReAct",
-    "models": "PaLM-540B",
-    "inputModality": "not mentioned but should be HTML",
-    "strategies": "reason + act; \"prompt LLMs to generate both verbal reasoning traces and actions pertaining to a task in an interleaved manner\"",
+    "models": [
+      "PaLM-540B"
+    ],
+    "inputModality": [
+      "not mentioned but should be HTML"
+    ],
+    "strategies": [
+      "reason + act; \"prompt LLMs to generate both verbal reasoning traces and actions pertaining to a task in an interleaved manner\""
+    ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebShop",
+    "benchmarksUsed": [
+      "WebShop"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -1332,9 +1520,13 @@ const data = [
       "accessibility trees",
       "screenshots"
     ],
-    "strategies": "benchmark to detect if web agents comply with malicious tasks; use BrowserGym environment",
+    "strategies": [
+      "benchmark to detect if web agents comply with malicious tasks; use BrowserGym environment"
+    ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "SafeArena",
+    "benchmarksUsed": [
+      "SafeArena"
+    ],
     "modalitiesFinal": "-",
     "llmComplexityFinal": "-",
     "overallFinal": "-",
@@ -1352,8 +1544,12 @@ const data = [
       "Qwen2 7B",
       "Qwen2.5 32B"
     ],
-    "inputModality": "HTML",
-    "strategies": "fine-tuning using proprietary workflow data (> 250 domains);",
+    "inputModality": [
+      "HTML"
+    ],
+    "strategies": [
+      "fine-tuning using proprietary workflow data (> 250 domains);"
+    ],
     "multiLLM": "FALSE",
     "benchmarksUsed": [
       "Mind2Web",
@@ -1376,7 +1572,9 @@ const data = [
       "gpt-4-turbo",
       "text-davinci-003"
     ],
-    "inputModality": "HTML",
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "\" Stacked LLM Policies for Web Actions (SteP)\"; Markov Decision Process where state is a stack of policies",
       "per time step policy on top of stack: acts on page XOR invokes new policy XOR terminates and gets removed; decompose problem into distinct policies providing instructions for a subproblem each;"
@@ -1403,7 +1601,9 @@ const data = [
       "LLaMA-3",
       "Claude-3.5"
     ],
-    "inputModality": "not mentioned but should be HTML",
+    "inputModality": [
+      "not mentioned but should be HTML"
+    ],
     "strategies": [
       "\"iterative framework that couples data synthesis with task-performance\"",
       "LLM distillation",
@@ -1417,7 +1617,9 @@ const data = [
       "which small LLM benefits from"
     ],
     "multiLLM": "TRUE",
-    "benchmarksUsed": "WebArena",
+    "benchmarksUsed": [
+      "WebArena"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -1435,7 +1637,9 @@ const data = [
       "GPT-3.5",
       "CodeLlama-7B"
     ],
-    "inputModality": "HTML",
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "state abstraction",
       "trajectory-as-exemplar prompting",
@@ -1459,8 +1663,12 @@ const data = [
     "authors": "Ou, Tianyue; Xu, Frank F.; Madaan, Aman; Liu, Jiarui; Lo, Robert; Sridhar, Abishek; Sengupta, Sudipta; Roth, Dan; Neubig, Graham; Zhou, Shuyan",
     "title": "Synatra: Turning Indirect Knowledge into Direct Demonstrations for Digital Agents at Scale",
     "shorthand": "Synatra",
-    "models": "Codellama-instruct 7B",
-    "inputModality": "AX-tree (for Mind2Web unclear otherwise)",
+    "models": [
+      "Codellama-instruct 7B"
+    ],
+    "inputModality": [
+      "AX-tree (for Mind2Web unclear otherwise)"
+    ],
     "strategies": [
       "transform indirect knowledge into direct demonstrations",
       "finetuning",
@@ -1534,8 +1742,12 @@ const data = [
     "authors": "Trabucco, Brandon; Sigurdsson, Gunnar; Piramuthu, Robinson; Salakhutdinov, Ruslan",
     "title": "Towards Internet-Scale Training For Agents",
     "shorthand": "InSTA",
-    "models": "Llama 3.1 70B",
-    "inputModality": "not mentioned but should be HTML",
+    "models": [
+      "Llama 3.1 70B"
+    ],
+    "inputModality": [
+      "not mentioned but should be HTML"
+    ],
     "strategies": [
       "\"a pipeline to facilitate Internet-scale training for agents without laborious human annotation\"",
       "1) let LLM generate tasks for 150k websites 2) have agents complete tasks saving trajectories 3)  let LLM review trajectories and judge success",
@@ -1559,8 +1771,12 @@ const data = [
     "authors": "Zhou, Ruiwen; Yang, Yingxuan; Wen, Muning; Wen, Ying; Wang, Wenhao; Xi, Chunling; Xu, Guoqiang; Yu, Yong; Zhang, Weinan",
     "title": "TRAD: Enhancing LLM Agents with Step-Wise Thought Retrieval and Aligned Decision",
     "shorthand": "TRAD",
-    "models": "GPT-3.5-Turbo",
-    "inputModality": "HTML",
+    "models": [
+      "GPT-3.5-Turbo"
+    ],
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "thought retrieval",
       "aligned decision",
@@ -1569,7 +1785,9 @@ const data = [
       "enhances Synapse Idea"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "Mind2Web",
+    "benchmarksUsed": [
+      "Mind2Web"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -1583,7 +1801,9 @@ const data = [
     "authors": "Koh, Jing Yu; McAleer, Stephen; Fried, Daniel; Salakhutdinov, Ruslan",
     "title": "Tree Search for Language Model Agents",
     "shorthand": "TreeSearch",
-    "models": "GPT-4o",
+    "models": [
+      "GPT-4o"
+    ],
     "inputModality": [
       "Screenshots",
       "AX-tree"
@@ -1619,14 +1839,18 @@ const data = [
       "Llama-2-13B-Chat",
       "Mistral-7B"
     ],
-    "inputModality": "not mentioned but should be HTML",
+    "inputModality": [
+      "not mentioned but should be HTML"
+    ],
     "strategies": [
       "make agents learn from failures and successes",
       "interative optimizaiton framework",
       "Exploration-based Trajectory Optimization"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebShop",
+    "benchmarksUsed": [
+      "WebShop"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "+",
     "overallFinal": "0",
@@ -1645,14 +1869,18 @@ const data = [
       "LaMDa-1B",
       "T5-3B"
     ],
-    "inputModality": "HTML",
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "Semantic classification",
       "description generation",
       "Autonomous web navigation as benchmarks for HTML understanding of LLMs; finetuning"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "MiniWoB",
+    "benchmarksUsed": [
+      "MiniWoB"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "+",
     "overallFinal": "0",
@@ -1706,7 +1934,9 @@ const data = [
       "SoM"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebArenaLite",
+    "benchmarksUsed": [
+      "WebArenaLite"
+    ],
     "modalitiesFinal": "-",
     "llmComplexityFinal": "-",
     "overallFinal": "-",
@@ -1725,7 +1955,9 @@ const data = [
       "Qwen2-VL",
       "GPT-4o"
     ],
-    "inputModality": "Screenshots",
+    "inputModality": [
+      "Screenshots"
+    ],
     "strategies": [
       "In-context-abstraction-learning (ICAL)",
       "library of examples",
@@ -1736,7 +1968,9 @@ const data = [
       "set of marks"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "VisualWebArena",
+    "benchmarksUsed": [
+      "VisualWebArena"
+    ],
     "modalitiesFinal": "-",
     "llmComplexityFinal": "-",
     "overallFinal": "-",
@@ -1756,7 +1990,9 @@ const data = [
       "Mistral 7B",
       "Llama-3 8B"
     ],
-    "inputModality": "not mentioned but should be HTML",
+    "inputModality": [
+      "not mentioned but should be HTML"
+    ],
     "strategies": [
       "Step-level Reward Acquisition (monte-carlo method for step-level reward estimation)",
       "Iterative Agent Optimization (cyclical process for agent action refinement)",
@@ -1765,7 +2001,9 @@ const data = [
       "SFT"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebShop",
+    "benchmarksUsed": [
+      "WebShop"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "+",
     "overallFinal": "0",
@@ -1824,7 +2062,9 @@ const data = [
       "reasoning before acting"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebArena",
+    "benchmarksUsed": [
+      "WebArena"
+    ],
     "modalitiesFinal": "-",
     "llmComplexityFinal": "-",
     "overallFinal": "-",
@@ -1838,11 +2078,19 @@ const data = [
     "authors": "Pan, Yichen; Kong, Dehan; Zhou, Sida; Cui, Cheng; Leng, Yifei; Jiang, Bing; Liu, Hangyu; Shang, Yanyi; Zhou, Shuyan; Wu, Tongshuang; Wu, Zhengyang",
     "title": "WebCanvas: Benchmarking Web Agents in Online Environments",
     "shorthand": "WebCanvas",
-    "models": "GPT-4-Turbo",
-    "inputModality": "not mentioned but should be HTML",
-    "strategies": "GPT-4-turbo + memory and ReAct",
+    "models": [
+      "GPT-4-Turbo"
+    ],
+    "inputModality": [
+      "not mentioned but should be HTML"
+    ],
+    "strategies": [
+      "GPT-4-turbo + memory and ReAct"
+    ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "Mind2Web-Live",
+    "benchmarksUsed": [
+      "Mind2Web-Live"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -1878,7 +2126,9 @@ const data = [
       "no new agent method"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebLinx",
+    "benchmarksUsed": [
+      "WebLinx"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "0",
     "overallFinal": "0",
@@ -1896,7 +2146,9 @@ const data = [
       "GPT-3.5",
       "GPT-4"
     ],
-    "inputModality": "AX-tree",
+    "inputModality": [
+      "AX-tree"
+    ],
     "strategies": [
       "multi-agent system; Monte Carlo Tree Search (MCTS) with local and global optimization; global: hierarchical task decomposition",
       "reflective task adjustment",
@@ -1928,13 +2180,17 @@ const data = [
       "GLM-4-9B",
       "Llama-3.1-70B"
     ],
-    "inputModality": "HTML",
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "task generation from unsuccessful attempts; outcome-supervised reward model (ORM); adaptive reinforcement learning strategies; \"self-evolving online curriculum reinforcement learning framework\"",
       "RL"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebArenaLite",
+    "benchmarksUsed": [
+      "WebArenaLite"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "+",
     "overallFinal": "0",
@@ -1948,8 +2204,12 @@ const data = [
     "authors": "Yao, Shunyu; Chen, Howard; Yang, John; Narasimhan, Karthik",
     "title": "WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents",
     "shorthand": "WebShop",
-    "models": "BERT",
-    "inputModality": "HTML or simple",
+    "models": [
+      "BERT"
+    ],
+    "inputModality": [
+      "HTML or simple"
+    ],
     "strategies": [
       "\"simulated e-commerce website environment with 1.18 million real-world products and 12",
       "087 crowd-sourced text instructions\"",
@@ -1957,7 +2217,9 @@ const data = [
       "RL"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "WebShop",
+    "benchmarksUsed": [
+      "WebShop"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "+",
     "overallFinal": "0",
@@ -1971,15 +2233,21 @@ const data = [
     "authors": "Hu, Die; Ge, Jingguo; Tang, Weitao; Li, Guoyi; Li, Liangxiong; Wu, Bingzhen",
     "title": "WebSurfer: Enhancing LLM Agents with Web-Wise Feedback for Web Navigation",
     "shorthand": "WebSurfer",
-    "models": "GPT-3.5-turbo-16k-0613",
-    "inputModality": "HTML",
+    "models": [
+      "GPT-3.5-turbo-16k-0613"
+    ],
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "ICL",
       "web-wise insight feedback mechanism: long and short term memory storing expert and practical insights",
       "\"retrieval-based Exemplar Selection and Ordering\""
     ],
     "multiLLM": "TRUE",
-    "benchmarksUsed": "Mind2Web",
+    "benchmarksUsed": [
+      "Mind2Web"
+    ],
     "modalitiesFinal": "+",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -1993,15 +2261,21 @@ const data = [
     "authors": "He, Hongliang; Yao, Wenlin; Ma, Kaixin; Yu, Wenhao; Dai, Yong; Zhang, Hongming; Lan, Zhenzhong; Yu, Dong",
     "title": "WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models",
     "shorthand": "WebVoyager",
-    "models": "GPT-4V-ACT",
+    "models": [
+      "GPT-4V-ACT"
+    ],
     "inputModality": [
       "screenshot",
       "auxiliary text",
       "and history"
     ],
-    "strategies": "multimodal web agent; automated evaluation protocol using GPT-4V (\"ave screenshots throughout the online navigation process and then use GPT-4V to evaluate these trajectories together with the final results automatically\"); GPT-4V as web agent evaluator",
+    "strategies": [
+      "multimodal web agent; automated evaluation protocol using GPT-4V (\"ave screenshots throughout the online navigation process and then use GPT-4V to evaluate these trajectories together with the final results automatically\"); GPT-4V as web agent evaluator"
+    ],
     "multiLLM": "TRUE",
-    "benchmarksUsed": "WebVoyager",
+    "benchmarksUsed": [
+      "WebVoyager"
+    ],
     "modalitiesFinal": "-",
     "llmComplexityFinal": "-",
     "overallFinal": "-",
@@ -2023,14 +2297,18 @@ const data = [
       "Qwen-2.5-32B",
       "Qwen-2.5-72B"
     ],
-    "inputModality": "HTML",
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "explorer agent (built on ReAct",
       "thought-action-observation paradigm) + critic agent(memory maintanence",
       "response generation);  RAG"
     ],
     "multiLLM": "TRUE",
-    "benchmarksUsed": "WebWalkerQA",
+    "benchmarksUsed": [
+      "WebWalkerQA"
+    ],
     "modalitiesFinal": "0",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -2048,7 +2326,9 @@ const data = [
       "GPT-3.5-Turbo",
       "Llama 2 7B"
     ],
-    "inputModality": "HTML",
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "step-by-step approach; using sequentially generated programs (code interacts with the API (click",
       "scroll",
@@ -2056,7 +2336,9 @@ const data = [
       "zero or one shot; Auto-Context Generation"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "MiniWob++",
+    "benchmarksUsed": [
+      "MiniWob++"
+    ],
     "modalitiesFinal": "+",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -2075,13 +2357,17 @@ const data = [
       "Mistral 7B",
       "Gemma-2B"
     ],
-    "inputModality": "HTML",
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "Web Element Preference Optimization (WEPO); \"unsupervised preference learning by sampling distance-based non-salient web elements as negative samples",
       "optimizing maximum likelihood objective within Direct Preference Optimization (DPO).\";preference learning using non-relevant web elements as negative samples"
     ],
     "multiLLM": "FALSE",
-    "benchmarksUsed": "Mind2Web",
+    "benchmarksUsed": [
+      "Mind2Web"
+    ],
     "modalitiesFinal": "+",
     "llmComplexityFinal": "+",
     "overallFinal": "+",
@@ -2095,8 +2381,12 @@ const data = [
     "authors": "Lutz, Michael; Bohra, Arth; Saroyan, Manvel; Harutyunyan, Artem; Campagna, Giovanni",
     "title": "WILBUR: Adaptive In-Context Learning for Robust and Accurate Web Agents",
     "shorthand": "WILBUR",
-    "models": "GPT-4 Turbo",
-    "inputModality": "HTML",
+    "models": [
+      "GPT-4 Turbo"
+    ],
+    "inputModality": [
+      "HTML"
+    ],
     "strategies": [
       "demonstration ranking model; instruction synthesis ; retrieval",
       "synthesis",
@@ -2110,7 +2400,9 @@ const data = [
       "answer module"
     ],
     "multiLLM": "TRUE",
-    "benchmarksUsed": "WebVoyager",
+    "benchmarksUsed": [
+      "WebVoyager"
+    ],
     "modalitiesFinal": "+",
     "llmComplexityFinal": "-",
     "overallFinal": "0",
@@ -2124,7 +2416,9 @@ const data = [
     "authors": "Bonatti, Rogerio; Zhao, Dan; Bonacci, Francesco; Dupont, Dillon; Abdali, Sara; Li, Yinheng; Lu, Yadong; Wagle, Justin; Koishida, Kazuhito; Bucker, Arthur; Jang, Lawrence; Hui, Zack",
     "title": "Windows Agent Arena: Evaluating Multi-Modal OS Agents at Scale",
     "shorthand": "Navi",
-    "models": "GPT-4o",
+    "models": [
+      "GPT-4o"
+    ],
     "inputModality": [
       "HTML",
       "Screenshots"
