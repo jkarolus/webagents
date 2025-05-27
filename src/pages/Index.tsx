@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 import { Search, Filter, Calendar, BookOpen } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -41,16 +40,16 @@ const data = [
 
 const Index = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [yearFilter, setYearFilter] = useState('');
-  const [modelFilter, setModelFilter] = useState('');
-  const [modalityFilter, setModalityFilter] = useState('');
-  const [strategyFilter, setStrategyFilter] = useState('');
-  const [multiLLMFilter, setMultiLLMFilter] = useState('');
-  const [benchmarkFilter, setBenchmarkFilter] = useState('');
-  const [venueFilter, setVenueFilter] = useState('');
-  const [modalitiesFinalFilter, setModalitiesFinalFilter] = useState('');
-  const [llmComplexityFinalFilter, setLlmComplexityFinalFilter] = useState('');
-  const [overallFinalFilter, setOverallFinalFilter] = useState('');
+  const [yearFilter, setYearFilter] = useState('all');
+  const [modelFilter, setModelFilter] = useState('all');
+  const [modalityFilter, setModalityFilter] = useState('all');
+  const [strategyFilter, setStrategyFilter] = useState('all');
+  const [multiLLMFilter, setMultiLLMFilter] = useState('all');
+  const [benchmarkFilter, setBenchmarkFilter] = useState('all');
+  const [venueFilter, setVenueFilter] = useState('all');
+  const [modalitiesFinalFilter, setModalitiesFinalFilter] = useState('all');
+  const [llmComplexityFinalFilter, setLlmComplexityFinalFilter] = useState('all');
+  const [overallFinalFilter, setOverallFinalFilter] = useState('all');
 
   // Extract unique values for filter options
   const uniqueYears = [...new Set(data.map(item => item.publicationYear))].sort();
@@ -69,16 +68,16 @@ const Index = () => {
         item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.authors.toLowerCase().includes(searchTerm.toLowerCase());
       
-      const matchesYear = yearFilter === '' || item.publicationYear === yearFilter;
-      const matchesModel = modelFilter === '' || item.models.includes(modelFilter);
-      const matchesModality = modalityFilter === '' || item.inputModality.includes(modalityFilter);
-      const matchesStrategy = strategyFilter === '' || item.strategies.includes(strategyFilter);
-      const matchesMultiLLM = multiLLMFilter === '' || item.multiLLM === multiLLMFilter;
-      const matchesBenchmark = benchmarkFilter === '' || item.benchmarksUsed.includes(benchmarkFilter);
-      const matchesVenue = venueFilter === '' || item.venue === venueFilter;
-      const matchesModalitiesFinal = modalitiesFinalFilter === '' || item.modalitiesFinal === modalitiesFinalFilter;
-      const matchesLlmComplexityFinal = llmComplexityFinalFilter === '' || item.llmComplexityFinal === llmComplexityFinalFilter;
-      const matchesOverallFinal = overallFinalFilter === '' || item.overallFinal === overallFinalFilter;
+      const matchesYear = yearFilter === 'all' || item.publicationYear === yearFilter;
+      const matchesModel = modelFilter === 'all' || item.models.includes(modelFilter);
+      const matchesModality = modalityFilter === 'all' || item.inputModality.includes(modalityFilter);
+      const matchesStrategy = strategyFilter === 'all' || item.strategies.includes(strategyFilter);
+      const matchesMultiLLM = multiLLMFilter === 'all' || item.multiLLM === multiLLMFilter;
+      const matchesBenchmark = benchmarkFilter === 'all' || item.benchmarksUsed.includes(benchmarkFilter);
+      const matchesVenue = venueFilter === 'all' || item.venue === venueFilter;
+      const matchesModalitiesFinal = modalitiesFinalFilter === 'all' || item.modalitiesFinal === modalitiesFinalFilter;
+      const matchesLlmComplexityFinal = llmComplexityFinalFilter === 'all' || item.llmComplexityFinal === llmComplexityFinalFilter;
+      const matchesOverallFinal = overallFinalFilter === 'all' || item.overallFinal === overallFinalFilter;
 
       return matchesSearch && matchesYear && matchesModel && matchesModality && 
              matchesStrategy && matchesMultiLLM && matchesBenchmark && matchesVenue &&
@@ -89,16 +88,16 @@ const Index = () => {
 
   const clearAllFilters = () => {
     setSearchTerm('');
-    setYearFilter('');
-    setModelFilter('');
-    setModalityFilter('');
-    setStrategyFilter('');
-    setMultiLLMFilter('');
-    setBenchmarkFilter('');
-    setVenueFilter('');
-    setModalitiesFinalFilter('');
-    setLlmComplexityFinalFilter('');
-    setOverallFinalFilter('');
+    setYearFilter('all');
+    setModelFilter('all');
+    setModalityFilter('all');
+    setStrategyFilter('all');
+    setMultiLLMFilter('all');
+    setBenchmarkFilter('all');
+    setVenueFilter('all');
+    setModalitiesFinalFilter('all');
+    setLlmComplexityFinalFilter('all');
+    setOverallFinalFilter('all');
   };
 
   const getRatingColor = (rating: string) => {
@@ -152,7 +151,7 @@ const Index = () => {
                   <SelectValue placeholder="Any year" />
                 </SelectTrigger>
                 <SelectContent className="bg-white">
-                  <SelectItem value="">Any year</SelectItem>
+                  <SelectItem value="all">Any year</SelectItem>
                   {uniqueYears.map(year => (
                     <SelectItem key={year} value={year}>{year}</SelectItem>
                   ))}
@@ -167,7 +166,7 @@ const Index = () => {
                   <SelectValue placeholder="Any model" />
                 </SelectTrigger>
                 <SelectContent className="bg-white">
-                  <SelectItem value="">Any model</SelectItem>
+                  <SelectItem value="all">Any model</SelectItem>
                   {uniqueModels.map(model => (
                     <SelectItem key={model} value={model}>{model}</SelectItem>
                   ))}
@@ -182,7 +181,7 @@ const Index = () => {
                   <SelectValue placeholder="Any modality" />
                 </SelectTrigger>
                 <SelectContent className="bg-white">
-                  <SelectItem value="">Any modality</SelectItem>
+                  <SelectItem value="all">Any modality</SelectItem>
                   {uniqueModalities.map(modality => (
                     <SelectItem key={modality} value={modality}>{modality}</SelectItem>
                   ))}
@@ -197,7 +196,7 @@ const Index = () => {
                   <SelectValue placeholder="Any strategy" />
                 </SelectTrigger>
                 <SelectContent className="bg-white">
-                  <SelectItem value="">Any strategy</SelectItem>
+                  <SelectItem value="all">Any strategy</SelectItem>
                   {uniqueStrategies.map(strategy => (
                     <SelectItem key={strategy} value={strategy}>{strategy}</SelectItem>
                   ))}
@@ -212,7 +211,7 @@ const Index = () => {
                   <SelectValue placeholder="Any" />
                 </SelectTrigger>
                 <SelectContent className="bg-white">
-                  <SelectItem value="">Any</SelectItem>
+                  <SelectItem value="all">Any</SelectItem>
                   <SelectItem value="True">True</SelectItem>
                   <SelectItem value="False">False</SelectItem>
                 </SelectContent>
@@ -226,7 +225,7 @@ const Index = () => {
                   <SelectValue placeholder="Any benchmark" />
                 </SelectTrigger>
                 <SelectContent className="bg-white">
-                  <SelectItem value="">Any benchmark</SelectItem>
+                  <SelectItem value="all">Any benchmark</SelectItem>
                   {uniqueBenchmarks.map(benchmark => (
                     <SelectItem key={benchmark} value={benchmark}>{benchmark}</SelectItem>
                   ))}
@@ -241,7 +240,7 @@ const Index = () => {
                   <SelectValue placeholder="Any venue" />
                 </SelectTrigger>
                 <SelectContent className="bg-white">
-                  <SelectItem value="">Any venue</SelectItem>
+                  <SelectItem value="all">Any venue</SelectItem>
                   {uniqueVenues.map(venue => (
                     <SelectItem key={venue} value={venue}>{venue}</SelectItem>
                   ))}
@@ -256,7 +255,7 @@ const Index = () => {
                   <SelectValue placeholder="Any rating" />
                 </SelectTrigger>
                 <SelectContent className="bg-white">
-                  <SelectItem value="">Any rating</SelectItem>
+                  <SelectItem value="all">Any rating</SelectItem>
                   {uniqueModalitiesFinal.map(rating => (
                     <SelectItem key={rating} value={rating}>{rating}</SelectItem>
                   ))}
@@ -271,7 +270,7 @@ const Index = () => {
                   <SelectValue placeholder="Any rating" />
                 </SelectTrigger>
                 <SelectContent className="bg-white">
-                  <SelectItem value="">Any rating</SelectItem>
+                  <SelectItem value="all">Any rating</SelectItem>
                   {uniqueLlmComplexityFinal.map(rating => (
                     <SelectItem key={rating} value={rating}>{rating}</SelectItem>
                   ))}
@@ -286,7 +285,7 @@ const Index = () => {
                   <SelectValue placeholder="Any rating" />
                 </SelectTrigger>
                 <SelectContent className="bg-white">
-                  <SelectItem value="">Any rating</SelectItem>
+                  <SelectItem value="all">Any rating</SelectItem>
                   {uniqueOverallFinal.map(rating => (
                     <SelectItem key={rating} value={rating}>{rating}</SelectItem>
                   ))}
