@@ -1,9 +1,12 @@
+
 import React, { useState, useMemo } from 'react';
-import { Search, Filter, Calendar, BookOpen } from 'lucide-react';
+import { Search, Filter, Calendar, BookOpen, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 
 const data = [
   {
@@ -38,18 +41,89 @@ const data = [
   }
 ];
 
+// Multi-select component
+const MultiSelect = ({ 
+  options, 
+  selected, 
+  onSelectionChange, 
+  placeholder 
+}: { 
+  options: string[], 
+  selected: string[], 
+  onSelectionChange: (values: string[]) => void, 
+  placeholder: string 
+}) => {
+  const handleToggle = (value: string) => {
+    if (selected.includes(value)) {
+      onSelectionChange(selected.filter(item => item !== value));
+    } else {
+      onSelectionChange([...selected, value]);
+    }
+  };
+
+  const removeItem = (value: string) => {
+    onSelectionChange(selected.filter(item => item !== value));
+  };
+
+  return (
+    <Popover>
+      <PopoverTrigger asChild>
+        <div className="min-h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer">
+          {selected.length === 0 ? (
+            <span className="text-muted-foreground">{placeholder}</span>
+          ) : (
+            <div className="flex flex-wrap gap-1">
+              {selected.map(item => (
+                <Badge key={item} variant="secondary" className="text-xs">
+                  {item}
+                  <X 
+                    className="h-3 w-3 ml-1 cursor-pointer" 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      removeItem(item);
+                    }}
+                  />
+                </Badge>
+              ))}
+            </div>
+          )}
+        </div>
+      </PopoverTrigger>
+      <PopoverContent className="w-full p-2 bg-white border border-gray-200 shadow-lg z-50">
+        <div className="space-y-2 max-h-60 overflow-auto">
+          {options.map(option => (
+            <div key={option} className="flex items-center space-x-2">
+              <Checkbox
+                id={option}
+                checked={selected.includes(option)}
+                onCheckedChange={() => handleToggle(option)}
+              />
+              <label 
+                htmlFor={option} 
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+              >
+                {option}
+              </label>
+            </div>
+          ))}
+        </div>
+      </PopoverContent>
+    </Popover>
+  );
+};
+
 const Index = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [yearFilter, setYearFilter] = useState('all');
-  const [modelFilter, setModelFilter] = useState('all');
-  const [modalityFilter, setModalityFilter] = useState('all');
-  const [strategyFilter, setStrategyFilter] = useState('all');
-  const [multiLLMFilter, setMultiLLMFilter] = useState('all');
-  const [benchmarkFilter, setBenchmarkFilter] = useState('all');
-  const [venueFilter, setVenueFilter] = useState('all');
-  const [modalitiesFinalFilter, setModalitiesFinalFilter] = useState('all');
-  const [llmComplexityFinalFilter, setLlmComplexityFinalFilter] = useState('all');
-  const [overallFinalFilter, setOverallFinalFilter] = useState('all');
+  const [yearFilter, setYearFilter] = useState<string[]>([]);
+  const [modelFilter, setModelFilter] = useState<string[]>([]);
+  const [modalityFilter, setModalityFilter] = useState<string[]>([]);
+  const [strategyFilter, setStrategyFilter] = useState<string[]>([]);
+  const [multiLLMFilter, setMultiLLMFilter] = useState<string[]>([]);
+  const [benchmarkFilter, setBenchmarkFilter] = useState<string[]>([]);
+  const [venueFilter, setVenueFilter] = useState<string[]>([]);
+  const [modalitiesFinalFilter, setModalitiesFinalFilter] = useState<string[]>([]);
+  const [llmComplexityFinalFilter, setLlmComplexityFinalFilter] = useState<string[]>([]);
+  const [overallFinalFilter, setOverallFinalFilter] = useState<string[]>([]);
 
   // Extract unique values for filter options
   const uniqueYears = [...new Set(data.map(item => item.publicationYear))].sort();
@@ -68,16 +142,16 @@ const Index = () => {
         item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.authors.toLowerCase().includes(searchTerm.toLowerCase());
       
-      const matchesYear = yearFilter === 'all' || item.publicationYear === yearFilter;
-      const matchesModel = modelFilter === 'all' || item.models.includes(modelFilter);
-      const matchesModality = modalityFilter === 'all' || item.inputModality.includes(modalityFilter);
-      const matchesStrategy = strategyFilter === 'all' || item.strategies.includes(strategyFilter);
-      const matchesMultiLLM = multiLLMFilter === 'all' || item.multiLLM === multiLLMFilter;
-      const matchesBenchmark = benchmarkFilter === 'all' || item.benchmarksUsed.includes(benchmarkFilter);
-      const matchesVenue = venueFilter === 'all' || item.venue === venueFilter;
-      const matchesModalitiesFinal = modalitiesFinalFilter === 'all' || item.modalitiesFinal === modalitiesFinalFilter;
-      const matchesLlmComplexityFinal = llmComplexityFinalFilter === 'all' || item.llmComplexityFinal === llmComplexityFinalFilter;
-      const matchesOverallFinal = overallFinalFilter === 'all' || item.overallFinal === overallFinalFilter;
+      const matchesYear = yearFilter.length === 0 || yearFilter.includes(item.publicationYear);
+      const matchesModel = modelFilter.length === 0 || modelFilter.some(model => item.models.includes(model));
+      const matchesModality = modalityFilter.length === 0 || modalityFilter.some(modality => item.inputModality.includes(modality));
+      const matchesStrategy = strategyFilter.length === 0 || strategyFilter.some(strategy => item.strategies.includes(strategy));
+      const matchesMultiLLM = multiLLMFilter.length === 0 || multiLLMFilter.includes(item.multiLLM);
+      const matchesBenchmark = benchmarkFilter.length === 0 || benchmarkFilter.some(benchmark => item.benchmarksUsed.includes(benchmark));
+      const matchesVenue = venueFilter.length === 0 || venueFilter.includes(item.venue);
+      const matchesModalitiesFinal = modalitiesFinalFilter.length === 0 || modalitiesFinalFilter.includes(item.modalitiesFinal);
+      const matchesLlmComplexityFinal = llmComplexityFinalFilter.length === 0 || llmComplexityFinalFilter.includes(item.llmComplexityFinal);
+      const matchesOverallFinal = overallFinalFilter.length === 0 || overallFinalFilter.includes(item.overallFinal);
 
       return matchesSearch && matchesYear && matchesModel && matchesModality && 
              matchesStrategy && matchesMultiLLM && matchesBenchmark && matchesVenue &&
@@ -88,16 +162,16 @@ const Index = () => {
 
   const clearAllFilters = () => {
     setSearchTerm('');
-    setYearFilter('all');
-    setModelFilter('all');
-    setModalityFilter('all');
-    setStrategyFilter('all');
-    setMultiLLMFilter('all');
-    setBenchmarkFilter('all');
-    setVenueFilter('all');
-    setModalitiesFinalFilter('all');
-    setLlmComplexityFinalFilter('all');
-    setOverallFinalFilter('all');
+    setYearFilter([]);
+    setModelFilter([]);
+    setModalityFilter([]);
+    setStrategyFilter([]);
+    setMultiLLMFilter([]);
+    setBenchmarkFilter([]);
+    setVenueFilter([]);
+    setModalitiesFinalFilter([]);
+    setLlmComplexityFinalFilter([]);
+    setOverallFinalFilter([]);
   };
 
   const getRatingColor = (rating: string) => {
@@ -146,151 +220,102 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Publication Year</label>
-              <Select value={yearFilter} onValueChange={setYearFilter}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Any year" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="all">Any year</SelectItem>
-                  {uniqueYears.map(year => (
-                    <SelectItem key={year} value={year}>{year}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <MultiSelect
+                options={uniqueYears}
+                selected={yearFilter}
+                onSelectionChange={setYearFilter}
+                placeholder="Select years"
+              />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Model</label>
-              <Select value={modelFilter} onValueChange={setModelFilter}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Any model" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="all">Any model</SelectItem>
-                  {uniqueModels.map(model => (
-                    <SelectItem key={model} value={model}>{model}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <MultiSelect
+                options={uniqueModels}
+                selected={modelFilter}
+                onSelectionChange={setModelFilter}
+                placeholder="Select models"
+              />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Input Modality</label>
-              <Select value={modalityFilter} onValueChange={setModalityFilter}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Any modality" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="all">Any modality</SelectItem>
-                  {uniqueModalities.map(modality => (
-                    <SelectItem key={modality} value={modality}>{modality}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <MultiSelect
+                options={uniqueModalities}
+                selected={modalityFilter}
+                onSelectionChange={setModalityFilter}
+                placeholder="Select modalities"
+              />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Strategy</label>
-              <Select value={strategyFilter} onValueChange={setStrategyFilter}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Any strategy" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="all">Any strategy</SelectItem>
-                  {uniqueStrategies.map(strategy => (
-                    <SelectItem key={strategy} value={strategy}>{strategy}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <MultiSelect
+                options={uniqueStrategies}
+                selected={strategyFilter}
+                onSelectionChange={setStrategyFilter}
+                placeholder="Select strategies"
+              />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Multi-LLM</label>
-              <Select value={multiLLMFilter} onValueChange={setMultiLLMFilter}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Any" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="all">Any</SelectItem>
-                  <SelectItem value="True">True</SelectItem>
-                  <SelectItem value="False">False</SelectItem>
-                </SelectContent>
-              </Select>
+              <MultiSelect
+                options={["True", "False"]}
+                selected={multiLLMFilter}
+                onSelectionChange={setMultiLLMFilter}
+                placeholder="Select multi-LLM"
+              />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Benchmark</label>
-              <Select value={benchmarkFilter} onValueChange={setBenchmarkFilter}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Any benchmark" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="all">Any benchmark</SelectItem>
-                  {uniqueBenchmarks.map(benchmark => (
-                    <SelectItem key={benchmark} value={benchmark}>{benchmark}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <MultiSelect
+                options={uniqueBenchmarks}
+                selected={benchmarkFilter}
+                onSelectionChange={setBenchmarkFilter}
+                placeholder="Select benchmarks"
+              />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Venue</label>
-              <Select value={venueFilter} onValueChange={setVenueFilter}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Any venue" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="all">Any venue</SelectItem>
-                  {uniqueVenues.map(venue => (
-                    <SelectItem key={venue} value={venue}>{venue}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <MultiSelect
+                options={uniqueVenues}
+                selected={venueFilter}
+                onSelectionChange={setVenueFilter}
+                placeholder="Select venues"
+              />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Modalities Final</label>
-              <Select value={modalitiesFinalFilter} onValueChange={setModalitiesFinalFilter}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Any rating" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="all">Any rating</SelectItem>
-                  {uniqueModalitiesFinal.map(rating => (
-                    <SelectItem key={rating} value={rating}>{rating}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <MultiSelect
+                options={uniqueModalitiesFinal}
+                selected={modalitiesFinalFilter}
+                onSelectionChange={setModalitiesFinalFilter}
+                placeholder="Select ratings"
+              />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">LLM Complexity Final</label>
-              <Select value={llmComplexityFinalFilter} onValueChange={setLlmComplexityFinalFilter}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Any rating" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="all">Any rating</SelectItem>
-                  {uniqueLlmComplexityFinal.map(rating => (
-                    <SelectItem key={rating} value={rating}>{rating}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <MultiSelect
+                options={uniqueLlmComplexityFinal}
+                selected={llmComplexityFinalFilter}
+                onSelectionChange={setLlmComplexityFinalFilter}
+                placeholder="Select ratings"
+              />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Overall Final</label>
-              <Select value={overallFinalFilter} onValueChange={setOverallFinalFilter}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Any rating" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="all">Any rating</SelectItem>
-                  {uniqueOverallFinal.map(rating => (
-                    <SelectItem key={rating} value={rating}>{rating}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <MultiSelect
+                options={uniqueOverallFinal}
+                selected={overallFinalFilter}
+                onSelectionChange={setOverallFinalFilter}
+                placeholder="Select ratings"
+              />
             </div>
           </div>
         </div>
