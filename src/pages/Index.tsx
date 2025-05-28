@@ -14,7 +14,7 @@ const data = [
     "authors": "Sun, Haotian; Zhuang, Yuchen; Kong, Lingkai; Dai, Bo; Zhang, Chao",
     "title": "AdaPlanner: Adaptive Planning from Feedback with Language Models",
     "shorthand": "AdaPlanner",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2023-05",
     "inputModality": [
       "Text"
@@ -44,7 +44,7 @@ const data = [
     "authors": "Verma, Gaurav; Kaur, Rachneet; Srishankar, Nishan; Zeng, Zhen; Balch, Tucker; Veloso, Manuela",
     "title": "AdaptAgent: Adapting Multimodal Web Agents with Few-Shot Learning from Human Demonstrations",
     "shorthand": "AdaptAgent",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-11",
     "inputModality": [
       "Text",
@@ -76,7 +76,7 @@ const data = [
     "authors": "Pan, Jiayi; Zhang, Yichi; Tomlin, Nicholas; Zhou, Yifei; Levine, Sergey; Suhr, Alane",
     "title": "Autonomous Evaluation and Refinement of Digital Agents",
     "shorthand": "AER",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-10",
     "inputModality": [
       "Text",
@@ -106,7 +106,7 @@ const data = [
     "authors": "Abuelsaad, Tamer; Akkil, Deepak; Dey, Prasenjit; Jagmohan, Ashish; Vempaty, Aditya; Kokku, Ravi",
     "title": "Agent-E: From Autonomous Web Navigation to Foundational Design Principles in Agentic Systems",
     "shorthand": "Agent E",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2024-07",
     "inputModality": [
       "Text"
@@ -133,7 +133,7 @@ const data = [
     "authors": "Putta, Pranav; Mills, Edmund; Garg, Naman; Motwani, Sumeet; Finn, Chelsea; Garg, Divyansh; Rafailov, Rafael",
     "title": "Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents",
     "shorthand": "Agent Q",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-08",
     "inputModality": [
       "Text"
@@ -163,7 +163,7 @@ const data = [
     "authors": "Zharmagambetov, Arman; Guo, Chuan; Evtimov, Ivan; Pavlova, Maya; Salakhutdinov, Ruslan; Chaudhuri, Kamalika",
     "title": "AgentDAM: Privacy Leakage Evaluation for Autonomous Web Agents",
     "shorthand": "AgentDAM",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2025-03",
     "inputModality": [
       "Text",
@@ -193,7 +193,7 @@ const data = [
     "authors": "Azam, Ruhana; Abuelsaad, Tamer; Vempaty, Aditya; Jagmohan, Ashish",
     "title": "Multimodal Auto Validation For Self-Refinement in Web Agents",
     "shorthand": "Agent-E_2",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2024-10",
     "inputModality": [
       "Text",
@@ -223,7 +223,7 @@ const data = [
     "authors": "Zeng, Aohan; Liu, Mingdao; Lu, Rui; Wang, Bowen; Liu, Xiao; Dong, Yuxiao; Tang, Jie",
     "title": "AgentTuning: Enabling Generalized Agent Abilities for LLMs",
     "shorthand": "AgentLM",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-08",
     "inputModality": [
       "Text"
@@ -253,7 +253,7 @@ const data = [
     "authors": "Yang, Ke; Liu, Yao; Chaudhary, Sapana; Fakoor, Rasool; Chaudhari, Pratik; Karypis, George; Rangwala, Huzefa",
     "title": "AgentOccam: A Simple Yet Strong Baseline for LLM-Based Web Agents",
     "shorthand": "AgentOccam",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-10",
     "inputModality": [
       "Text"
@@ -282,7 +282,7 @@ const data = [
     "authors": "Zhang, Ruichen; Qiu, Mufan; Tan, Zhen; Zhang, Mohan; Lu, Vincent; Peng, Jie; Xu, Kaidi; Agudelo, Leandro Z.; Qian, Peter; Chen, Tianlong",
     "title": "Symbiotic Cooperation for Web Agents: Harnessing Complementary Strengths of Large and Small LLMs",
     "shorthand": "AgentSymbiotic",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2025-02",
     "inputModality": [
       "Text"
@@ -313,7 +313,7 @@ const data = [
     "authors": "Xu, Yiheng; Lu, Dunjie; Shen, Zhennan; Wang, Junli; Wang, Zekun; Mao, Yuchen; Xiong, Caiming; Yu, Tao",
     "title": "AgentTrek: Agent Trajectory Synthesis via Guiding Replay with Web Tutorials",
     "shorthand": "AgentTrek",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-12",
     "inputModality": [
       "Visuals"
@@ -344,7 +344,7 @@ const data = [
     "authors": "Lo, Robert; Sridhar, Abishek; Xu, Frank; Zhu, Hao; Zhou, Shuyan",
     "title": "Hierarchical Prompting Assists Large Language Model on Web Navigation",
     "shorthand": "ASH",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2023-12",
     "inputModality": [
       "Text"
@@ -372,7 +372,7 @@ const data = [
     "authors": "Fu, Yao; Kim, Dong-Ki; Kim, Jaekyeom; Sohn, Sungryull; Logeswaran, Lajanugen; Bae, Kyunghoon; Lee, Honglak",
     "title": "AutoGuide: Automated Generation and Selection of Context-Aware Guidelines for Large Language Model Agents",
     "shorthand": "AutoGuide",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-12",
     "inputModality": [
       "Text",
@@ -403,7 +403,7 @@ const data = [
     "authors": "Kim, Jaekyeom; Kim, Dong-Ki; Logeswaran, Lajanugen; Sohn, Sungryull; Lee, Honglak",
     "title": "Auto-Intent: Automated Intent Discovery and Self-Exploration for Large Language Model Web Agents",
     "shorthand": "Auto-Intent",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-11",
     "inputModality": [
       "Text"
@@ -436,7 +436,7 @@ const data = [
     "authors": "Chen, Minghao; Li, Yihang; Yang, Yanting; Yu, Shiyu; Lin, Binbin; He, Xiaofei",
     "title": "AutoManual: Constructing Instruction Manuals by LLM Agents via Interactive Environmental Learning",
     "shorthand": "AutoManual",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2024-11",
     "inputModality": [
       "Text"
@@ -466,7 +466,7 @@ const data = [
     "authors": "Lai, Hanyu; Liu, Xiao; Iong, Iat Long; Yao, Shuntian; Chen, Yuxuan; Shen, Pengbo; Yu, Hao; Zhang, Hanchen; Zhang, Xiaohan; Dong, Yuxiao; Tang, Jie",
     "title": "AutoWebGLM: A Large Language Model-based Web Navigating Agent",
     "shorthand": "AutoWebGLM",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-08",
     "inputModality": [
       "Text"
@@ -498,7 +498,7 @@ const data = [
     "authors": "Wang, Zora Zhiruo; Mao, Jiayuan; Fried, Daniel; Neubig, Graham",
     "title": "Agent Workflow Memory",
     "shorthand": "AWM",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-09",
     "inputModality": [
       "Text"
@@ -527,7 +527,7 @@ const data = [
     "authors": "Song, Yixiao; Thai, Katherine; Pham, Chau Minh; Chang, Yapei; Nadaf, Mazin; Iyyer, Mohit",
     "title": "BEARCUBS: A benchmark for computer-using web agents",
     "shorthand": "BEARCUBS",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2025-03",
     "inputModality": [
       "Text",
@@ -557,7 +557,7 @@ const data = [
     "authors": "Song, Yueqi; Xu, Frank; Zhou, Shuyan; Neubig, Graham",
     "title": "Beyond Browsing: API-Based Web Agents",
     "shorthand": "Beyond Browsing",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2025-01",
     "inputModality": [
       "Text",
@@ -585,7 +585,7 @@ const data = [
     "authors": "Chezelles, Thibault Le Sellier De; Gasse, Maxime; Drouin, Alexandre; Caccia, Massimo; Boisvert, L\u00e9o; Thakkar, Megh; Marty, Tom; Assouel, Rim; Shayegan, Sahar Omidi; Jang, Lawrence Keunho; L\u00f9, Xing Han; Yoran, Ori; Kong, Dehan; Xu, Frank F.; Reddy, Siva; Cappart, Quentin; Neubig, Graham; Salakhutdinov, Ruslan; Chapados, Nicolas; Lacoste, Alexandre",
     "title": "The BrowserGym Ecosystem for Web Agent Research",
     "shorthand": "BrowserGym",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-12",
     "inputModality": [
       "Text",
@@ -627,7 +627,7 @@ const data = [
     "authors": "Huq, Faria; Wang, Zora Zhiruo; Xu, Frank F.; Ou, Tianyue; Zhou, Shuyan; Bigham, Jeffrey P.; Neubig, Graham",
     "title": "CowPilot: A Framework for Autonomous and Human-Agent Collaborative Web Navigation",
     "shorthand": "CowPilot",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2025-02",
     "inputModality": [
       "Text"
@@ -655,7 +655,7 @@ const data = [
     "authors": "Wang, Haoyu; Li, Tao; Deng, Zhiwei; Roth, Dan; Li, Yang",
     "title": "Devil`s Advocate: Anticipatory Reflection for LLM Agents",
     "shorthand": "DevilsAdvocate",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-11",
     "inputModality": [
       "Text"
@@ -683,7 +683,7 @@ const data = [
     "authors": "Kil, Jihyung; Song, Chan Hee; Zheng, Boyuan; Deng, Xiang; Su, Yu; Chao, Wei-Lun",
     "title": "Dual-View Visual Contextualization for Web Navigation",
     "shorthand": "Dual-VCR",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2024-06",
     "inputModality": [
       "Text",
@@ -713,7 +713,7 @@ const data = [
     "authors": "Liu, Xiaoqian; Wang, Ke; Li, Yongbin; Wu, Yuchuan; Ma, Wentao; Kong, Aobo; Huang, Fei; Jiao, Jianbin; Zhang, Junge",
     "title": "EPO: Explicit Policy Optimization for Strategic Reasoning in LLMs via Reinforcement Learning",
     "shorthand": "EPO",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2025-03",
     "inputModality": [
       "Text"
@@ -743,7 +743,7 @@ const data = [
     "authors": "Song, Yifan; Yin, Da; Yue, Xiang; Huang, Jie; Li, Sujian; Lin, Bill Yuchen",
     "title": "Trial and Error: Exploration-Based Trajectory Optimization of LLM Agents",
     "shorthand": "ETO",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-08",
     "inputModality": [
       "Text"
@@ -773,7 +773,7 @@ const data = [
     "authors": "Zhao, Andrew; Huang, Daniel; Xu, Quentin; Lin, Matthieu; Liu, Yong-Jin; Huang, Gao",
     "title": "ExpeL: LLM Agents Are Experiential Learners",
     "shorthand": "ExpeL",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-03",
     "inputModality": [
       "Text"
@@ -803,7 +803,7 @@ const data = [
     "authors": "Pahuja, Vardaan; Lu, Yadong; Rosset, Corby; Gou, Boyu; Mitra, Arindam; Whitehead, Spencer; Su, Yu; Awadallah, Ahmed",
     "title": "Explorer: Scaling Exploration-driven Web Trajectory Synthesis for Multimodal Web Agents",
     "shorthand": "Explorer",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2025-02",
     "inputModality": [
       "Text",
@@ -837,7 +837,7 @@ const data = [
     "authors": "Fereidouni, Moghis; Mosharrof, Adib; Siddique, A.b.",
     "title": "Grounded Language Agent for Product Search via Intelligent Web Interactions",
     "shorthand": "GLAINTEL",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-11",
     "inputModality": [
       "Text"
@@ -864,7 +864,7 @@ const data = [
     "authors": "Furuta, Hiroki; Matsuo, Yutaka; Faust, Aleksandra; Gur, Izzeddin",
     "title": "Exposing Limitations of Language Model Agents in Sequential-Task Compositions on the Web",
     "shorthand": "HTML-T5++",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-12",
     "inputModality": [
       "Text"
@@ -896,7 +896,7 @@ const data = [
     "authors": "Sarch, Gabriel; Jang, Lawrence; Tarr, Michael J.; Cohen, William W.; Marino, Kenneth; Fragkiadaki, Katerina",
     "title": "VLM Agents Generate Their Own Memories: Distilling Experience into Embodied Programs of Thought",
     "shorthand": "ICAL",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2025-01",
     "inputModality": [
       "Visuals"
@@ -929,7 +929,7 @@ const data = [
     "authors": "Reddy, Revanth Gangi; Mukherjee, Sagnik; Kim, Jeonghwan; Wang, Zhenhailong; Hakkani-Tur, Dilek; Ji, Heng",
     "title": "Infogent: An Agent-Based Framework for Web Information Aggregation",
     "shorthand": "Infogent",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2024-10",
     "inputModality": [
       "Text",
@@ -962,7 +962,7 @@ const data = [
     "authors": "Trabucco, Brandon; Sigurdsson, Gunnar; Piramuthu, Robinson; Salakhutdinov, Ruslan",
     "title": "Towards Internet-Scale Training For Agents",
     "shorthand": "InSTA",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2025-02",
     "inputModality": [
       "Text"
@@ -991,7 +991,7 @@ const data = [
     "authors": "Xiong, Weimin; Song, Yifan; Zhao, Xiutian; Wu, Wenhao; Wang, Xun; Wang, Ke; Li, Cheng; Peng, Wei; Li, Sujian",
     "title": "Watch Every Step! LLM Agent Learning via Iterative Step-level Process Refinement",
     "shorthand": "IPR",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-11",
     "inputModality": [
       "Text"
@@ -1022,7 +1022,7 @@ const data = [
     "authors": "Ma, Kaixin; Zhang, Hongming; Wang, Hongwei; Pan, Xiaoman; Yu, Wenhao; Yu, Dong",
     "title": "LASER: LLM Agent with State-Space Exploration for Web Navigation",
     "shorthand": "LASER",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-02",
     "inputModality": [
       "Text"
@@ -1053,7 +1053,7 @@ const data = [
     "authors": "Zhou, Andy; Yan, Kai; Shlapentokh-Rothman, Michal; Wang, Haohan; Wang, Yu-Xiong",
     "title": "Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models",
     "shorthand": "LATS",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-06",
     "inputModality": [
       "Text"
@@ -1083,7 +1083,7 @@ const data = [
     "authors": "Deng, Xiang; Gu, Yu; Zheng, Boyuan; Chen, Shijie; Stevens, Sam; Wang, Boshi; Sun, Huan; Su, Yu",
     "title": "Mind2Web: Towards a Generalist Agent for the Web",
     "shorthand": "MindAct",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2023-12",
     "inputModality": [
       "Text"
@@ -1112,7 +1112,7 @@ const data = [
     "authors": "Bonatti, Rogerio; Zhao, Dan; Bonacci, Francesco; Dupont, Dillon; Abdali, Sara; Li, Yinheng; Lu, Yadong; Wagle, Justin; Koishida, Kazuhito; Bucker, Arthur; Jang, Lawrence; Hui, Zack",
     "title": "Windows Agent Arena: Evaluating Multi-Modal OS Agents at Scale",
     "shorthand": "Navi",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-09",
     "inputModality": [
       "Text",
@@ -1142,7 +1142,7 @@ const data = [
     "authors": "Murty, Shikhar; Bahdanau, Dzmitry; Manning, Christopher D.",
     "title": "NNetscape Navigator: Complex Demonstrations for Web Agents Without a Demonstrator",
     "shorthand": "NNetscape Navigator",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2024-10",
     "inputModality": [
       "Text"
@@ -1175,7 +1175,7 @@ const data = [
     "authors": "Xie, Tianbao; Zhou, Fan; Cheng, Zhoujun; Shi, Peng; Weng, Luoxuan; Liu, Yitao; Hua, Toh Jing; Zhao, Junning; Liu, Qian; Liu, Che; Liu, Leo Z.; Xu, Yiheng; Su, Hongjin; Shin, Dongchan; Xiong, Caiming; Yu, Tao",
     "title": "OpenAgents: An Open Platform for Language Agents in the Wild",
     "shorthand": "OpenAgent",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2023-10",
     "inputModality": [
       "Text"
@@ -1201,7 +1201,7 @@ const data = [
     "authors": "Iong, Iat Long; Liu, Xiao; Chen, Yuxuan; Lai, Hanyu; Yao, Shuntian; Shen, Pengbo; Yu, Hao; Dong, Yuxiao; Tang, Jie",
     "title": "OpenWebAgent: An Open Toolkit to Enable Web Agents on Large Language Models",
     "shorthand": "OpenWebAgent",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-08",
     "inputModality": [
       "Text",
@@ -1228,7 +1228,7 @@ const data = [
       "Feedback and Optimization"
     ],
     "shorthand": "OpenWebVoyager",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-10",
     "inputModality": [
       "Text",
@@ -1259,7 +1259,7 @@ const data = [
     "authors": "Zhou, Yifei; Yang, Qianlan; Lin, Kaixiang; Bai, Min; Zhou, Xiong; Wang, Yu-Xiong; Levine, Sergey; Li, Erran",
     "title": "Proposer-Agent-Evaluator(PAE): Autonomous Skill Discovery For Foundation Model Internet Agents",
     "shorthand": "PAE",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-12",
     "inputModality": [
       "Visuals"
@@ -1289,7 +1289,7 @@ const data = [
     "authors": "Erdogan, Lutfi Eren; Lee, Nicholas; Kim, Sehoon; Moon, Suhong; Furuta, Hiroki; Anumanchipalli, Gopala; Keutzer, Kurt; Gholami, Amir",
     "title": "Plan-and-Act: Improving Planning of Agents for Long-Horizon Tasks",
     "shorthand": "Plan&Act",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2025-03",
     "inputModality": [
       "Text"
@@ -1319,7 +1319,7 @@ const data = [
     "authors": "Kim, Byoungjip; Jang, Youngsoo; Logeswaran, Lajanugen; Kim, Geon-Hyeong; Kim, Yu Jin; Lee, Honglak; Lee, Moontae",
     "title": "Prospector: Improving LLM Agents with Self-Asking and Trajectory Ranking",
     "shorthand": "Prospector",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2024-11",
     "inputModality": [
       "Text"
@@ -1351,7 +1351,7 @@ const data = [
     "authors": "Cai, Hongru; Li, Yongqi; Wang, Wenjie; Zhu, Fengbin; Shen, Xiaoyu; Li, Wenjie; Chua, Tat-Seng",
     "title": "Large Language Models Empowered Personalized Web Agents",
     "shorthand": "PUMA",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-10",
     "inputModality": [
       "API-calls"
@@ -1385,7 +1385,7 @@ const data = [
       "Reflecting and Dynamic Decision Making for Web Agents"
     ],
     "shorthand": "R2D2",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2025-01",
     "inputModality": [
       "Text"
@@ -1416,7 +1416,7 @@ const data = [
     "authors": "Kim, Minsoo; Bursztyn, Victor; Koh, Eunyee; Guo, Shunan; Hwang, Seung-won",
     "title": "RaDA: Retrieval-augmented Web Agent Planning with LLMs",
     "shorthand": "RaDA",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-08",
     "inputModality": [
       "Text"
@@ -1445,7 +1445,7 @@ const data = [
     "authors": "Kim, Geunwoo; Baldi, Pierre; McAleer, Stephen",
     "title": "Language Models can Solve Computer Tasks",
     "shorthand": "RCI",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2023-12",
     "inputModality": [
       "Text"
@@ -1472,7 +1472,7 @@ const data = [
     "authors": "Yao, Shunyu; Zhao, Jeffrey; Yu, Dian; Du, Nan; Shafran, Izhak; Narasimhan, Karthik; Cao, Yuan",
     "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
     "shorthand": "ReAct",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2023-03",
     "inputModality": [
       "Text"
@@ -1500,7 +1500,7 @@ const data = [
     "authors": "Xu, Nancy; Masling, Sam; Du, Michael; Campagna, Giovanni; Heck, Larry; Landay, James; Lam, Monica",
     "title": "Grounding Open-Domain Instructions to Automate Web Support Tasks",
     "shorthand": "RUSS",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2021-06",
     "inputModality": [
       "Text"
@@ -1527,7 +1527,7 @@ const data = [
     "authors": "Tur, Ada Defne; Meade, Nicholas; L\u00f9, Xing Han; Zambrano, Alejandra; Patel, Arkil; Durmus, Esin; Gella, Spandana; Sta?czak, Karolina; Reddy, Siva",
     "title": "SafeArena: Evaluating the Safety of Autonomous Web Agents",
     "shorthand": "SafeArena",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2025-03",
     "inputModality": [
       "Text",
@@ -1558,7 +1558,7 @@ const data = [
     "authors": "Song, Yifan; Xiong, Weimin; Zhao, Xiutian; Zhu, Dawei; Wu, Wenhao; Wang, Ke; Li, Cheng; Peng, Wei; Li, Sujian",
     "title": "AgentBank: Towards Generalized LLM Agents via Fine-Tuning on 50000+ Interaction Trajectories",
     "shorthand": "SAMOYED",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-11",
     "inputModality": [
       "Text"
@@ -1585,7 +1585,7 @@ const data = [
     "authors": "Shen, Junhong; Jain, Atishay; Xiao, Zedian; Amlekar, Ishan; Hadji, Mouad; Podolny, Aaron; Talwalkar, Ameet",
     "title": "ScribeAgent: Towards Specialized Web Agents Using Production-Scale Workflow Data",
     "shorthand": "ScribeAgent",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-12",
     "inputModality": [
       "Text"
@@ -1616,7 +1616,7 @@ const data = [
       "if Grounded"
     ],
     "shorthand": "SeeAct",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-03",
     "inputModality": [
       "Text",
@@ -1646,7 +1646,7 @@ const data = [
     "authors": "Yoran, Ori; Amouyal, Samuel Joseph; Malaviya, Chaitanya; Bogin, Ben; Press, Ofir; Berant, Jonathan",
     "title": "AssistantBench: Can Web Agents Solve Realistic and Time-Consuming Tasks?",
     "shorthand": "SeePlanAct",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-10",
     "inputModality": [
       "Text",
@@ -1676,7 +1676,7 @@ const data = [
     "authors": "Sodhi, Paloma; Branavan, S. R. K.; Artzi, Yoav; McDonald, Ryan",
     "title": "SteP: Stacked LLM Policies for Web Actions",
     "shorthand": "SteP",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-08",
     "inputModality": [
       "Text"
@@ -1707,7 +1707,7 @@ const data = [
     "authors": "Zheng, Longtao; Wang, Rundong; Wang, Xinrun; An, Bo",
     "title": "Synapse: Trajectory-as-Exemplar Prompting with Memory for Computer Control",
     "shorthand": "Synapse",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-01",
     "inputModality": [
       "Text"
@@ -1739,7 +1739,7 @@ const data = [
     "authors": "Ou, Tianyue; Xu, Frank F.; Madaan, Aman; Liu, Jiarui; Lo, Robert; Sridhar, Abishek; Sengupta, Sudipta; Roth, Dan; Neubig, Graham; Zhou, Shuyan",
     "title": "Synatra: Turning Indirect Knowledge into Direct Demonstrations for Digital Agents at Scale",
     "shorthand": "Synatra",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-11",
     "inputModality": [
       "Text"
@@ -1770,7 +1770,7 @@ const data = [
     "authors": "Zhou, Ruiwen; Yang, Yingxuan; Wen, Muning; Wen, Ying; Wang, Wenhao; Xi, Chunling; Xu, Guoqiang; Yu, Yong; Zhang, Weinan",
     "title": "TRAD: Enhancing LLM Agents with Step-Wise Thought Retrieval and Aligned Decision",
     "shorthand": "TRAD",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-03",
     "inputModality": [
       "Text"
@@ -1799,7 +1799,7 @@ const data = [
     "authors": "Koh, Jing Yu; McAleer, Stephen; Fried, Daniel; Salakhutdinov, Ruslan",
     "title": "Tree Search for Language Model Agents",
     "shorthand": "TreeSearch",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-10",
     "inputModality": [
       "Text",
@@ -1831,7 +1831,7 @@ const data = [
     "authors": "Liu, Junpeng; Ou, Tianyue; Song, Yifan; Qu, Yuxiao; Lam, Wai; Xiong, Chenyan; Chen, Wenhu; Neubig, Graham; Yue, Xiang",
     "title": "Harnessing Webpage UIs for Text-Rich Visual Understanding",
     "shorthand": "UIX",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-11",
     "inputModality": [
       "Text",
@@ -1864,7 +1864,7 @@ const data = [
     "authors": "Liu, Xiao; Zhang, Tianjie; Gu, Yu; Iong, Iat Long; Xu, Yifan; Song, Xixuan; Zhang, Shudan; Lai, Hanyu; Liu, Xinyi; Zhao, Hanlin; Sun, Jiadai; Yang, Xinyue; Yang, Yu; Qi, Zehan; Yao, Shuntian; Sun, Xueqiao; Cheng, Siyi; Zheng, Qinkai; Yu, Hao; Zhang, Hanchen; Hong, Wenyi; Ding, Ming; Pan, Lihang; Gu, Xiaotao; Zeng, Aohan; Du, Zhengxiao; Song, Chan Hee; Su, Yu; Dong, Yuxiao; Tang, Jie",
     "title": "VisualAgentBench: Towards Large Multimodal Models as Visual Foundation Agents",
     "shorthand": "VisualAgentBench",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-08",
     "inputModality": [
       "Text",
@@ -1903,7 +1903,7 @@ const data = [
     "authors": "Zhou, Shuyan; Xu, Frank F.; Zhu, Hao; Zhou, Xuhui; Lo, Robert; Sridhar, Abishek; Cheng, Xianyi; Ou, Tianyue; Bisk, Yonatan; Fried, Daniel; Alon, Uri; Neubig, Graham",
     "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
     "shorthand": "WebArena",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-04",
     "inputModality": [
       "Text",
@@ -1932,7 +1932,7 @@ const data = [
     "authors": "Pan, Yichen; Kong, Dehan; Zhou, Sida; Cui, Cheng; Leng, Yifei; Jiang, Bing; Liu, Hangyu; Shang, Yanyi; Zhou, Shuyan; Wu, Tongshuang; Wu, Zhengyang",
     "title": "WebCanvas: Benchmarking Web Agents in Online Environments",
     "shorthand": "WebCanvas",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-07",
     "inputModality": [
       "Text"
@@ -1959,7 +1959,7 @@ const data = [
     "authors": "Gu, Yu; Zheng, Boyuan; Gou, Boyu; Zhang, Kai; Chang, Cheng; Srivastava, Sanjari; Xie, Yanan; Qi, Peng; Sun, Huan; Su, Yu",
     "title": "Is Your LLM Secretly a World Model of the Internet? Model-Based Planning for Web Agents",
     "shorthand": "Webdreamer",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-11",
     "inputModality": [
       "Text",
@@ -1989,7 +1989,7 @@ const data = [
     "authors": "Furuta, Hiroki; Lee, Kuang-Huei; Nachum, Ofir; Matsuo, Yutaka; Faust, Aleksandra; Gu, Shixiang Shane; Gur, Izzeddin",
     "title": "Multimodal Web Navigation with Instruction-Finetuned Foundation Models",
     "shorthand": "WEBGUM",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-02",
     "inputModality": [
       "Text",
@@ -2020,7 +2020,7 @@ const data = [
     "authors": "L\u00f9, Xing Han; Kasner, Zden?k; Reddy, Siva",
     "title": "WebLINX: Real-World Website Navigation with Multi-Turn Dialogue",
     "shorthand": "WebLinx",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-09",
     "inputModality": [
       "Text",
@@ -2052,7 +2052,7 @@ const data = [
     "authors": "Gur, Izzeddin; Nachum, Ofir; Miao, Yingjie; Safdari, Mustafa; Huang, Austin; Chowdhery, Aakanksha; Narang, Sharan; Fiedel, Noah; Faust, Aleksandra",
     "title": "Understanding HTML with Large Language Models",
     "shorthand": "WebN",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2023-12",
     "inputModality": [
       "Text"
@@ -2082,7 +2082,7 @@ const data = [
     "authors": "Zhang, Yao; Ma, Zijian; Ma, Yunpu; Han, Zhen; Wu, Yu; Tresp, Volker",
     "title": "WebPilot: A Versatile and Autonomous Multi-Agent System for Web Task Execution with Strategic Exploration",
     "shorthand": "WebPilot",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2024-08",
     "inputModality": [
       "Text"
@@ -2116,7 +2116,7 @@ const data = [
     "authors": "Qi, Zehan; Liu, Xiao; Iong, Iat Long; Lai, Hanyu; Sun, Xueqiao; Zhao, Wenyi; Yang, Yu; Yang, Xinyue; Sun, Jiadai; Yao, Shuntian; Zhang, Tianjie; Xu, Wei; Tang, Jie; Dong, Yuxiao",
     "title": "WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum Reinforcement Learning",
     "shorthand": "WebRL",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2025-01",
     "inputModality": [
       "Text"
@@ -2146,7 +2146,7 @@ const data = [
     "authors": "Yao, Shunyu; Chen, Howard; Yang, John; Narasimhan, Karthik",
     "title": "WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents",
     "shorthand": "WebShop",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2022-11",
     "inputModality": [
       "Text"
@@ -2175,7 +2175,7 @@ const data = [
     "authors": "Hu, Die; Ge, Jingguo; Tang, Weitao; Li, Guoyi; Li, Liangxiong; Wu, Bingzhen",
     "title": "WebSurfer: Enhancing LLM Agents with Web-Wise Feedback for Web Navigation",
     "shorthand": "WebSurfer",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2025-03",
     "inputModality": [
       "Text"
@@ -2204,7 +2204,7 @@ const data = [
     "authors": "He, Hongliang; Yao, Wenlin; Ma, Kaixin; Yu, Wenhao; Dai, Yong; Zhang, Hongming; Lan, Zhenzhong; Yu, Dong",
     "title": "WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models",
     "shorthand": "WebVoyager",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2024-06",
     "inputModality": [
       "Text",
@@ -2232,7 +2232,7 @@ const data = [
     "authors": "Wu, Jialong; Yin, Wenbiao; Jiang, Yong; Wang, Zhenglin; Xi, Zekun; Fang, Runnan; Zhang, Linhai; He, Yulan; Zhou, Deyu; Xie, Pengjun; Huang, Fei",
     "title": "WebWalker: Benchmarking LLMs in Web Traversal",
     "shorthand": "WebWalker",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2025-01",
     "inputModality": [
       "Text"
@@ -2262,7 +2262,7 @@ const data = [
     "authors": "Tao, Heyi; T V, Sethuraman; Shlapentokh-Rothman, Michal; Gupta, Tanmay; Ji, Heng; Hoiem, Derek",
     "title": "WebWISE: Unlocking Web Interface Control for LLMs via Sequential Exploration",
     "shorthand": "WebWise",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-06",
     "inputModality": [
       "Text"
@@ -2295,7 +2295,7 @@ const data = [
     "authors": "Liu, Jiarun; Hao, Jia; Zhang, Chunhong; Hu, Zheng",
     "title": "WEPO: Web Element Preference Optimization for LLM-based Web Navigation",
     "shorthand": "WEPO",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-12",
     "inputModality": [
       "Text"
@@ -2325,7 +2325,7 @@ const data = [
     "authors": "Lutz, Michael; Bohra, Arth; Saroyan, Manvel; Harutyunyan, Artem; Campagna, Giovanni",
     "title": "WILBUR: Adaptive In-Context Learning for Robust and Accurate Web Agents",
     "shorthand": "WILBUR",
-    "multiLLM": "TRUE",
+    "multiLLM": "yes",
     "data_quartal": "2024-04",
     "inputModality": [
       "Text"
@@ -2356,7 +2356,7 @@ const data = [
     "authors": "Chae, Hyungjoo; Kim, Namyoung; Ong, Kai Tzu-iunn; Gwak, Minju; Song, Gwanwoo; Kim, Jihoon; Kim, Sunghwan; Lee, Dongha; Yeo, Jinyoung",
     "title": "Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation",
     "shorthand": "WMA",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2024-10",
     "inputModality": [
       "Text"
@@ -2387,7 +2387,7 @@ const data = [
     "authors": "Li, Tao; Li, Gang; Deng, Zhiwei; Wang, Bryan; Li, Yang",
     "title": "A Zero-Shot Language Agent for Computer Control with Structured Reflection",
     "shorthand": "ZeroShotAgent",
-    "multiLLM": "FALSE",
+    "multiLLM": "no",
     "data_quartal": "2023-12",
     "inputModality": [
       "Text"
