@@ -2761,7 +2761,7 @@ const Index = () => {
                   
                   <div>
                     <h4 className="text-sm font-medium text-gray-700 mb-2">Multi-LLM</h4>
-                    <Badge variant={item.multiLLM === "True" ? "default" : "secondary"} className="text-xs">
+                    <Badge variant={item.multiLLM === "yes" ? "default" : "secondary"} className="text-xs">
                       {item.multiLLM}
                     </Badge>
                   </div>
