@@ -1223,10 +1223,7 @@ const data = [
   {
     "publicationYear": "2024",
     "authors": "He, Hongliang; Yao, Wenlin; Ma, Kaixin; Yu, Wenhao; Zhang, Hongming; Fang, Tianqing; Lan, Zhenzhong; Yu, Dong",
-    "title": [
-      "OpenWebVoyager: Building Multimodal Web Agents via Iterative Real-World Exploration",
-      "Feedback and Optimization"
-    ],
+    "title": "OpenWebVoyager: Building Multimodal Web Agents via Iterative Real-World Exploration, Feedback and Optimization",
     "shorthand": "OpenWebVoyager",
     "multiLLM": "no",
     "data_quartal": "2024-10",
@@ -1380,10 +1377,7 @@ const data = [
   {
     "publicationYear": "2025",
     "authors": "Huang, Tenghao; Basu, Kinjal; Abdelaziz, Ibrahim; Kapanipathi, Pavan; May, Jonathan; Chen, Muhao",
-    "title": [
-      "R2D2: Remembering",
-      "Reflecting and Dynamic Decision Making for Web Agents"
-    ],
+    "title": "R2D2: Remembering, Reflecting and Dynamic Decision Making for Web Agents",
     "shorthand": "R2D2",
     "multiLLM": "yes",
     "data_quartal": "2025-01",
@@ -1611,10 +1605,7 @@ const data = [
   {
     "publicationYear": "2024",
     "authors": "Zheng, Boyuan; Gou, Boyu; Kil, Jihyung; Sun, Huan; Su, Yu",
-    "title": [
-      "GPT-4V(ision) is a Generalist Web Agent",
-      "if Grounded"
-    ],
+    "title": "GPT-4V(ision) is a Generalist Web Agent, if Grounded",
     "shorthand": "SeeAct",
     "multiLLM": "no",
     "data_quartal": "2024-03",
