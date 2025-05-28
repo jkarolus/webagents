@@ -2650,7 +2650,7 @@ const Index = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Modalities Final</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Energy: Modalities & Preprocessing</label>
               <MultiSelect
                 options={uniqueModalitiesFinal}
                 selected={modalitiesFinalFilter}
@@ -2660,7 +2660,7 @@ const Index = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">LLM Complexity Final</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Energy: LLM complexity & Multi-LLM</label>
               <MultiSelect
                 options={uniqueLlmComplexityFinal}
                 selected={llmComplexityFinalFilter}
@@ -2670,7 +2670,7 @@ const Index = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Overall Final</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Overall Energy Efficiency</label>
               <MultiSelect
                 options={uniqueOverallFinal}
                 selected={overallFinalFilter}
