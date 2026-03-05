@@ -2483,9 +2483,6 @@ const Index = () => {
   const [multiLLMFilter, setMultiLLMFilter] = useState<string[]>([]);
   const [benchmarkFilter, setBenchmarkFilter] = useState<string[]>([]);
   const [venueFilter, setVenueFilter] = useState<string[]>([]);
-  const [modalitiesFinalFilter, setModalitiesFinalFilter] = useState<string[]>([]);
-  const [llmComplexityFinalFilter, setLlmComplexityFinalFilter] = useState<string[]>([]);
-  const [overallFinalFilter, setOverallFinalFilter] = useState<string[]>([]);
 
   // Extract unique values for filter options
   const uniqueYears = [...new Set(data.map(item => item.publicationYear))].sort();
@@ -2494,9 +2491,6 @@ const Index = () => {
   const uniqueStrategies = [...new Set(data.flatMap(item => item.strategies))].sort();
   const uniqueBenchmarks = [...new Set(data.flatMap(item => item.benchmarksUsed))].sort();
   const uniqueVenues = [...new Set(data.map(item => item.venue))].sort();
-  const uniqueModalitiesFinal = [...new Set(data.map(item => item.modalitiesFinal))].sort();
-  const uniqueLlmComplexityFinal = [...new Set(data.map(item => item.llmComplexityFinal))].sort();
-  const uniqueOverallFinal = [...new Set(data.map(item => item.overallFinal))].sort();
 
   const filteredData = useMemo(() => {
     return data.filter(item => {
@@ -2511,16 +2505,11 @@ const Index = () => {
       const matchesMultiLLM = multiLLMFilter.length === 0 || multiLLMFilter.includes(item.multiLLM);
       const matchesBenchmark = benchmarkFilter.length === 0 || benchmarkFilter.some(benchmark => item.benchmarksUsed.includes(benchmark));
       const matchesVenue = venueFilter.length === 0 || venueFilter.includes(item.venue);
-      const matchesModalitiesFinal = modalitiesFinalFilter.length === 0 || modalitiesFinalFilter.includes(item.modalitiesFinal);
-      const matchesLlmComplexityFinal = llmComplexityFinalFilter.length === 0 || llmComplexityFinalFilter.includes(item.llmComplexityFinal);
-      const matchesOverallFinal = overallFinalFilter.length === 0 || overallFinalFilter.includes(item.overallFinal);
-
       return matchesSearch && matchesYear && matchesModel && matchesModality && 
-             matchesStrategy && matchesMultiLLM && matchesBenchmark && matchesVenue &&
-             matchesModalitiesFinal && matchesLlmComplexityFinal && matchesOverallFinal;
+             matchesStrategy && matchesMultiLLM && matchesBenchmark && matchesVenue;
     });
   }, [searchTerm, yearFilter, modelFilter, modalityFilter, strategyFilter, multiLLMFilter, 
-      benchmarkFilter, venueFilter, modalitiesFinalFilter, llmComplexityFinalFilter, overallFinalFilter]);
+      benchmarkFilter, venueFilter]);
 
   const clearAllFilters = () => {
     setSearchTerm('');
@@ -2531,19 +2520,10 @@ const Index = () => {
     setMultiLLMFilter([]);
     setBenchmarkFilter([]);
     setVenueFilter([]);
-    setModalitiesFinalFilter([]);
-    setLlmComplexityFinalFilter([]);
-    setOverallFinalFilter([]);
   };
 
-  const getRatingColor = (rating: string) => {
-    switch (rating) {
-      case '+': return 'bg-green-100 text-green-800 border-green-200';
-      case '0': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      case '-': return 'bg-red-100 text-red-800 border-red-200';
-      default: return 'bg-gray-100 text-gray-800 border-gray-200';
-    }
-  };
+
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -2649,35 +2629,6 @@ const Index = () => {
               />
             </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Energy: Modalities & Preprocessing</label>
-              <MultiSelect
-                options={uniqueModalitiesFinal}
-                selected={modalitiesFinalFilter}
-                onSelectionChange={setModalitiesFinalFilter}
-                placeholder="Select ratings"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Energy: LLM complexity & Multi-LLM</label>
-              <MultiSelect
-                options={uniqueLlmComplexityFinal}
-                selected={llmComplexityFinalFilter}
-                onSelectionChange={setLlmComplexityFinalFilter}
-                placeholder="Select ratings"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Overall Energy Efficiency</label>
-              <MultiSelect
-                options={uniqueOverallFinal}
-                selected={overallFinalFilter}
-                onSelectionChange={setOverallFinalFilter}
-                placeholder="Select ratings"
-              />
-            </div>
           </div>
         </div>
 
@@ -2707,17 +2658,6 @@ const Index = () => {
                         {item.venue}
                       </div>
                     </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <Badge className={`${getRatingColor(item.modalitiesFinal)} border`}>
-                      Mod: {item.modalitiesFinal}
-                    </Badge>
-                    <Badge className={`${getRatingColor(item.llmComplexityFinal)} border`}>
-                      LLM: {item.llmComplexityFinal}
-                    </Badge>
-                    <Badge className={`${getRatingColor(item.overallFinal)} border`}>
-                      Overall: {item.overallFinal}
-                    </Badge>
                   </div>
                 </div>
               </CardHeader>
