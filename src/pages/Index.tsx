@@ -1,6 +1,6 @@
 
 import React, { useState, useMemo } from 'react';
-import { Search, Filter, Calendar, BookOpen, X } from 'lucide-react';
+import { Search, Filter, Calendar, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
@@ -3286,7 +3286,7 @@ const Index = () => {
   const [strategyFilter, setStrategyFilter] = useState<string[]>([]);
   const [multiLLMFilter, setMultiLLMFilter] = useState<string[]>([]);
   const [benchmarkFilter, setBenchmarkFilter] = useState<string[]>([]);
-  const [venueFilter, setVenueFilter] = useState<string[]>([]);
+  
 
   // Extract unique values for filter options
   const uniqueYears = [...new Set(data.map(item => item.publicationYear))].sort();
@@ -3294,7 +3294,7 @@ const Index = () => {
   const uniqueModalities = [...new Set(data.flatMap(item => item.inputModality))].sort();
   const uniqueStrategies = [...new Set(data.flatMap(item => item.strategies))].sort();
   const uniqueBenchmarks = [...new Set(data.flatMap(item => item.benchmarksUsed))].sort();
-  const uniqueVenues = [...new Set(data.map(item => item.venue))].sort();
+  
 
   const filteredData = useMemo(() => {
     return data.filter(item => {
@@ -3308,12 +3308,11 @@ const Index = () => {
       const matchesStrategy = strategyFilter.length === 0 || strategyFilter.some(strategy => item.strategies.includes(strategy));
       const matchesMultiLLM = multiLLMFilter.length === 0 || multiLLMFilter.includes(item.multiLLM);
       const matchesBenchmark = benchmarkFilter.length === 0 || benchmarkFilter.some(benchmark => item.benchmarksUsed.includes(benchmark));
-      const matchesVenue = venueFilter.length === 0 || venueFilter.includes(item.venue);
       return matchesSearch && matchesYear && matchesModel && matchesModality && 
-             matchesStrategy && matchesMultiLLM && matchesBenchmark && matchesVenue;
+             matchesStrategy && matchesMultiLLM && matchesBenchmark;
     });
   }, [searchTerm, yearFilter, modelFilter, modalityFilter, strategyFilter, multiLLMFilter, 
-      benchmarkFilter, venueFilter]);
+      benchmarkFilter]);
 
   const clearAllFilters = () => {
     setSearchTerm('');
@@ -3323,7 +3322,6 @@ const Index = () => {
     setStrategyFilter([]);
     setMultiLLMFilter([]);
     setBenchmarkFilter([]);
-    setVenueFilter([]);
   };
 
 
@@ -3423,15 +3421,6 @@ const Index = () => {
               />
             </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Venue</label>
-              <MultiSelect
-                options={uniqueVenues}
-                selected={venueFilter}
-                onSelectionChange={setVenueFilter}
-                placeholder="Select venues"
-              />
-            </div>
 
           </div>
         </div>
@@ -3456,10 +3445,6 @@ const Index = () => {
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
                         {item.publicationYear}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <BookOpen className="w-4 h-4" />
-                        {item.venue}
                       </div>
                     </div>
                   </div>
@@ -3511,15 +3496,8 @@ const Index = () => {
                   </div>
                   
                   <div>
-                    <h4 className="text-sm font-medium text-gray-700 mb-2">DOI</h4>
-                    <a 
-                      href={item.doi} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 text-xs underline"
-                    >
-                      View Paper
-                    </a>
+                    <h4 className="text-sm font-medium text-gray-700 mb-2">Shorthand</h4>
+                    <Badge variant="outline" className="text-xs">{item.shorthand}</Badge>
                   </div>
                 </div>
               </CardContent>
